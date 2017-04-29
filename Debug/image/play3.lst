@@ -1,0 +1,2175 @@
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                      Unix v16.9.0.LTS *
+       3                    ;* Date/Time created: Sat Apr 29 07:00:45 2017                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --embed
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../image/play3.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen Unix v16.9.0.LTS Copyright (c) 1996-
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("/Users/jadedh/Desktop/2017Spring/EC450/workspace/PET/Debug")
+      13 00000000                   .sect   ".const:.string:pixel_play34BPP_UNCOMP"
+      14                            .clink
+      15                            .align  1
+      16                            .elfsym pixel_play34BPP_UNCOMP,SYM_SIZE(780)
+      17 00000000           pixel_play34BPP_UNCOMP:
+      18 00000000 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[0] @ 0
+      19 00000000 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[1] @ 8
+      20 00000000 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[2] @ 16
+      21 00000000 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[3] @ 24
+      22 00000004 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[4] @ 32
+      23 00000004 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[5] @ 40
+      24 00000004 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[6] @ 48
+      25 00000004 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[7] @ 56
+      26 00000008 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[8] @ 64
+      27 00000008 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[9] @ 72
+      28 00000008 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[10] @ 80
+      29 00000008 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[11] @ 88
+      30 0000000c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[12] @ 96
+      31 0000000c 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[13] @ 104
+      32 0000000c 00D5D6D6          .bits   213,8                   ; pixel_play34BPP_UNCOMP[14] @ 112
+      33 0000000c D6D5D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[15] @ 120
+      34 00000010 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[16] @ 128
+      35 00000010 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[17] @ 136
+      36 00000010 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[18] @ 144
+      37 00000010 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[19] @ 152
+      38 00000014 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[20] @ 160
+      39 00000014 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[21] @ 168
+      40 00000014 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[22] @ 176
+      41 00000014 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[23] @ 184
+      42 00000018 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[24] @ 192
+      43 00000018 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[25] @ 200
+      44 00000018 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[26] @ 208
+      45 00000018 659D6D9D          .bits   101,8                   ; pixel_play34BPP_UNCOMP[27] @ 216
+      46 0000001c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[28] @ 224
+      47 0000001c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[29] @ 232
+      48 0000001c 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[30] @ 240
+      49 0000001c 6D9D9D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[31] @ 248
+      50 00000020 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[32] @ 256
+      51 00000020 0000659D          .bits   101,8                   ; pixel_play34BPP_UNCOMP[33] @ 264
+      52 00000020 009D659D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[34] @ 272
+      53 00000020 6D9D659D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[35] @ 280
+      54 00000024 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[36] @ 288
+      55 00000024 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[37] @ 296
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    2
+
+      56 00000024 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[38] @ 304
+      57 00000024 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[39] @ 312
+      58 00000028 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[40] @ 320
+      59 00000028 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[41] @ 328
+      60 00000028 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[42] @ 336
+      61 00000028 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[43] @ 344
+      62 0000002c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[44] @ 352
+      63 0000002c 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[45] @ 360
+      64 0000002c 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[46] @ 368
+      65 0000002c D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[47] @ 376
+      66 00000030 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[48] @ 384
+      67 00000030 0000D5D6          .bits   213,8                   ; pixel_play34BPP_UNCOMP[49] @ 392
+      68 00000030 00D6D5D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[50] @ 400
+      69 00000030 D6D6D5D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[51] @ 408
+      70 00000034 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[52] @ 416
+      71 00000034 0000DCD6          .bits   220,8                   ; pixel_play34BPP_UNCOMP[53] @ 424
+      72 00000034 00D6DCD6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[54] @ 432
+      73 00000034 D6D6DCD6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[55] @ 440
+      74 00000038 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[56] @ 448
+      75 00000038 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[57] @ 456
+      76 00000038 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[58] @ 464
+      77 00000038 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[59] @ 472
+      78 0000003c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[60] @ 480
+      79 0000003c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[61] @ 488
+      80 0000003c 00699D9D          .bits   105,8                   ; pixel_play34BPP_UNCOMP[62] @ 496
+      81 0000003c 9D699D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[63] @ 504
+      82 00000040 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[64] @ 512
+      83 00000040 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[65] @ 520
+      84 00000040 00959D9D          .bits   149,8                   ; pixel_play34BPP_UNCOMP[66] @ 528
+      85 00000040 9D959D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[67] @ 536
+      86 00000044 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[68] @ 544
+      87 00000044 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[69] @ 552
+      88 00000044 00619D61          .bits   97,8                    ; pixel_play34BPP_UNCOMP[70] @ 560
+      89 00000044 9D619D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[71] @ 568
+      90 00000048 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[72] @ 576
+      91 00000048 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[73] @ 584
+      92 00000048 00919D61          .bits   145,8                   ; pixel_play34BPP_UNCOMP[74] @ 592
+      93 00000048 9D919D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[75] @ 600
+      94 0000004c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[76] @ 608
+      95 0000004c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[77] @ 616
+      96 0000004c 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[78] @ 624
+      97 0000004c 9D9D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[79] @ 632
+      98 00000050 000000D5          .bits   213,8                   ; pixel_play34BPP_UNCOMP[80] @ 640
+      99 00000050 0000D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[81] @ 648
+     100 00000050 00D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[82] @ 656
+     101 00000050 D6D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[83] @ 664
+     102 00000054 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[84] @ 672
+     103 00000054 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[85] @ 680
+     104 00000054 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[86] @ 688
+     105 00000054 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[87] @ 696
+     106 00000058 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[88] @ 704
+     107 00000058 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[89] @ 712
+     108 00000058 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[90] @ 720
+     109 00000058 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[91] @ 728
+     110 0000005c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[92] @ 736
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    3
+
+     111 0000005c 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[93] @ 744
+     112 0000005c 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[94] @ 752
+     113 0000005c D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[95] @ 760
+     114 00000060 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[96] @ 768
+     115 00000060 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[97] @ 776
+     116 00000060 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[98] @ 784
+     117 00000060 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[99] @ 792
+     118 00000064 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[100] @ 800
+     119 00000064 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[101] @ 808
+     120 00000064 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[102] @ 816
+     121 00000064 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[103] @ 824
+     122 00000068 0000006D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[104] @ 832
+     123 00000068 0000616D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[105] @ 840
+     124 00000068 006D616D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[106] @ 848
+     125 00000068 6D6D616D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[107] @ 856
+     126 0000006c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[108] @ 864
+     127 0000006c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[109] @ 872
+     128 0000006c 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[110] @ 880
+     129 0000006c AA9D9D9D          .bits   170,8                   ; pixel_play34BPP_UNCOMP[111] @ 888
+     130 00000070 000000A1          .bits   161,8                   ; pixel_play34BPP_UNCOMP[112] @ 896
+     131 00000070 00006DA1          .bits   109,8                   ; pixel_play34BPP_UNCOMP[113] @ 904
+     132 00000070 009D6DA1          .bits   157,8                   ; pixel_play34BPP_UNCOMP[114] @ 912
+     133 00000070 659D6DA1          .bits   101,8                   ; pixel_play34BPP_UNCOMP[115] @ 920
+     134 00000074 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[116] @ 928
+     135 00000074 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[117] @ 936
+     136 00000074 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[118] @ 944
+     137 00000074 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[119] @ 952
+     138 00000078 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[120] @ 960
+     139 00000078 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[121] @ 968
+     140 00000078 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[122] @ 976
+     141 00000078 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[123] @ 984
+     142 0000007c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[124] @ 992
+     143 0000007c 0000AAD6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[125] @ 1000
+     144 0000007c 00A6AAD6          .bits   166,8                   ; pixel_play34BPP_UNCOMP[126] @ 1008
+     145 0000007c D6A6AAD6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[127] @ 1016
+     146 00000080 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[128] @ 1024
+     147 00000080 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[129] @ 1032
+     148 00000080 00DAD6D6          .bits   218,8                   ; pixel_play34BPP_UNCOMP[130] @ 1040
+     149 00000080 AADAD6D6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[131] @ 1048
+     150 00000084 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[132] @ 1056
+     151 00000084 0000D6AA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[133] @ 1064
+     152 00000084 00D6D6AA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[134] @ 1072
+     153 00000084 D9D6D6AA          .bits   217,8                   ; pixel_play34BPP_UNCOMP[135] @ 1080
+     154 00000088 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[136] @ 1088
+     155 00000088 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[137] @ 1096
+     156 00000088 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[138] @ 1104
+     157 00000088 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[139] @ 1112
+     158 0000008c 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[140] @ 1120
+     159 0000008c 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[141] @ 1128
+     160 0000008c 00959D61          .bits   149,8                   ; pixel_play34BPP_UNCOMP[142] @ 1136
+     161 0000008c 9D959D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[143] @ 1144
+     162 00000090 0000006A          .bits   106,8                   ; pixel_play34BPP_UNCOMP[144] @ 1152
+     163 00000090 0000AA6A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[145] @ 1160
+     164 00000090 00AAAA6A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[146] @ 1168
+     165 00000090 A1AAAA6A          .bits   161,8                   ; pixel_play34BPP_UNCOMP[147] @ 1176
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    4
+
+     166 00000094 00000095          .bits   149,8                   ; pixel_play34BPP_UNCOMP[148] @ 1184
+     167 00000094 00009195          .bits   145,8                   ; pixel_play34BPP_UNCOMP[149] @ 1192
+     168 00000094 00AA9195          .bits   170,8                   ; pixel_play34BPP_UNCOMP[150] @ 1200
+     169 00000094 AAAA9195          .bits   170,8                   ; pixel_play34BPP_UNCOMP[151] @ 1208
+     170 00000098 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[152] @ 1216
+     171 00000098 0000ADAA          .bits   173,8                   ; pixel_play34BPP_UNCOMP[153] @ 1224
+     172 00000098 009DADAA          .bits   157,8                   ; pixel_play34BPP_UNCOMP[154] @ 1232
+     173 00000098 9D9DADAA          .bits   157,8                   ; pixel_play34BPP_UNCOMP[155] @ 1240
+     174 0000009c 00000091          .bits   145,8                   ; pixel_play34BPP_UNCOMP[156] @ 1248
+     175 0000009c 00009D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[157] @ 1256
+     176 0000009c 009D9D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[158] @ 1264
+     177 0000009c 9D9D9D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[159] @ 1272
+     178 000000a0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[160] @ 1280
+     179 000000a0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[161] @ 1288
+     180 000000a0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[162] @ 1296
+     181 000000a0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[163] @ 1304
+     182 000000a4 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[164] @ 1312
+     183 000000a4 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[165] @ 1320
+     184 000000a4 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[166] @ 1328
+     185 000000a4 A6AAAAAA          .bits   166,8                   ; pixel_play34BPP_UNCOMP[167] @ 1336
+     186 000000a8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[168] @ 1344
+     187 000000a8 0000C6D6          .bits   198,8                   ; pixel_play34BPP_UNCOMP[169] @ 1352
+     188 000000a8 00AAC6D6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[170] @ 1360
+     189 000000a8 AAAAC6D6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[171] @ 1368
+     190 000000ac 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[172] @ 1376
+     191 000000ac 0000A6AA          .bits   166,8                   ; pixel_play34BPP_UNCOMP[173] @ 1384
+     192 000000ac 00D6A6AA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[174] @ 1392
+     193 000000ac D6D6A6AA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[175] @ 1400
+     194 000000b0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[176] @ 1408
+     195 000000b0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[177] @ 1416
+     196 000000b0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[178] @ 1424
+     197 000000b0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[179] @ 1432
+     198 000000b4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[180] @ 1440
+     199 000000b4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[181] @ 1448
+     200 000000b4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[182] @ 1456
+     201 000000b4 619D6D9D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[183] @ 1464
+     202 000000b8 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[184] @ 1472
+     203 000000b8 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[185] @ 1480
+     204 000000b8 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[186] @ 1488
+     205 000000b8 AAAAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[187] @ 1496
+     206 000000bc 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[188] @ 1504
+     207 000000bc 00006161          .bits   97,8                    ; pixel_play34BPP_UNCOMP[189] @ 1512
+     208 000000bc 00AA6161          .bits   170,8                   ; pixel_play34BPP_UNCOMP[190] @ 1520
+     209 000000bc AAAA6161          .bits   170,8                   ; pixel_play34BPP_UNCOMP[191] @ 1528
+     210 000000c0 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[192] @ 1536
+     211 000000c0 0000A1AA          .bits   161,8                   ; pixel_play34BPP_UNCOMP[193] @ 1544
+     212 000000c0 006DA1AA          .bits   109,8                   ; pixel_play34BPP_UNCOMP[194] @ 1552
+     213 000000c0 9D6DA1AA          .bits   157,8                   ; pixel_play34BPP_UNCOMP[195] @ 1560
+     214 000000c4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[196] @ 1568
+     215 000000c4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[197] @ 1576
+     216 000000c4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[198] @ 1584
+     217 000000c4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[199] @ 1592
+     218 000000c8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[200] @ 1600
+     219 000000c8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[201] @ 1608
+     220 000000c8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[202] @ 1616
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    5
+
+     221 000000c8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[203] @ 1624
+     222 000000cc 000000CA          .bits   202,8                   ; pixel_play34BPP_UNCOMP[204] @ 1632
+     223 000000cc 0000AACA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[205] @ 1640
+     224 000000cc 00AAAACA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[206] @ 1648
+     225 000000cc AAAAAACA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[207] @ 1656
+     226 000000d0 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[208] @ 1664
+     227 000000d0 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[209] @ 1672
+     228 000000d0 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[210] @ 1680
+     229 000000d0 AAAAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[211] @ 1688
+     230 000000d4 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[212] @ 1696
+     231 000000d4 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[213] @ 1704
+     232 000000d4 00D6AAAA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[214] @ 1712
+     233 000000d4 D6D6AAAA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[215] @ 1720
+     234 000000d8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[216] @ 1728
+     235 000000d8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[217] @ 1736
+     236 000000d8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[218] @ 1744
+     237 000000d8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[219] @ 1752
+     238 000000dc 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[220] @ 1760
+     239 000000dc 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[221] @ 1768
+     240 000000dc 00959D9D          .bits   149,8                   ; pixel_play34BPP_UNCOMP[222] @ 1776
+     241 000000dc 9D959D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[223] @ 1784
+     242 000000e0 0000006A          .bits   106,8                   ; pixel_play34BPP_UNCOMP[224] @ 1792
+     243 000000e0 0000AA6A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[225] @ 1800
+     244 000000e0 00AAAA6A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[226] @ 1808
+     245 000000e0 AAAAAA6A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[227] @ 1816
+     246 000000e4 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[228] @ 1824
+     247 000000e4 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[229] @ 1832
+     248 000000e4 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[230] @ 1840
+     249 000000e4 AAAAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[231] @ 1848
+     250 000000e8 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[232] @ 1856
+     251 000000e8 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[233] @ 1864
+     252 000000e8 0061AAAA          .bits   97,8                    ; pixel_play34BPP_UNCOMP[234] @ 1872
+     253 000000e8 9D61AAAA          .bits   157,8                   ; pixel_play34BPP_UNCOMP[235] @ 1880
+     254 000000ec 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[236] @ 1888
+     255 000000ec 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[237] @ 1896
+     256 000000ec 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[238] @ 1904
+     257 000000ec 9D9D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[239] @ 1912
+     258 000000f0 000000D5          .bits   213,8                   ; pixel_play34BPP_UNCOMP[240] @ 1920
+     259 000000f0 0000D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[241] @ 1928
+     260 000000f0 00D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[242] @ 1936
+     261 000000f0 D6D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[243] @ 1944
+     262 000000f4 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[244] @ 1952
+     263 000000f4 0000AAD6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[245] @ 1960
+     264 000000f4 00AAAAD6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[246] @ 1968
+     265 000000f4 AAAAAAD6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[247] @ 1976
+     266 000000f8 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[248] @ 1984
+     267 000000f8 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[249] @ 1992
+     268 000000f8 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[250] @ 2000
+     269 000000f8 AAAAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[251] @ 2008
+     270 000000fc 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[252] @ 2016
+     271 000000fc 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[253] @ 2024
+     272 000000fc 00A6AAAA          .bits   166,8                   ; pixel_play34BPP_UNCOMP[254] @ 2032
+     273 000000fc D6A6AAAA          .bits   214,8                   ; pixel_play34BPP_UNCOMP[255] @ 2040
+     274 00000100 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[256] @ 2048
+     275 00000100 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[257] @ 2056
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    6
+
+     276 00000100 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[258] @ 2064
+     277 00000100 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[259] @ 2072
+     278 00000104 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[260] @ 2080
+     279 00000104 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[261] @ 2088
+     280 00000104 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[262] @ 2096
+     281 00000104 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[263] @ 2104
+     282 00000108 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[264] @ 2112
+     283 00000108 0000AA61          .bits   170,8                   ; pixel_play34BPP_UNCOMP[265] @ 2120
+     284 00000108 00A2AA61          .bits   162,8                   ; pixel_play34BPP_UNCOMP[266] @ 2128
+     285 00000108 AAA2AA61          .bits   170,8                   ; pixel_play34BPP_UNCOMP[267] @ 2136
+     286 0000010c 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[268] @ 2144
+     287 0000010c 000000AA          .bits   0,8                     ; pixel_play34BPP_UNCOMP[269] @ 2152
+     288 0000010c 000200AA          .bits   2,8                     ; pixel_play34BPP_UNCOMP[270] @ 2160
+     289 0000010c 020200AA          .bits   2,8                     ; pixel_play34BPP_UNCOMP[271] @ 2168
+     290 00000110 0000000A          .bits   10,8                    ; pixel_play34BPP_UNCOMP[272] @ 2176
+     291 00000110 0000AA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[273] @ 2184
+     292 00000110 00A1AA0A          .bits   161,8                   ; pixel_play34BPP_UNCOMP[274] @ 2192
+     293 00000110 6DA1AA0A          .bits   109,8                   ; pixel_play34BPP_UNCOMP[275] @ 2200
+     294 00000114 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[276] @ 2208
+     295 00000114 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[277] @ 2216
+     296 00000114 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[278] @ 2224
+     297 00000114 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[279] @ 2232
+     298 00000118 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[280] @ 2240
+     299 00000118 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[281] @ 2248
+     300 00000118 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[282] @ 2256
+     301 00000118 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[283] @ 2264
+     302 0000011c 000000DA          .bits   218,8                   ; pixel_play34BPP_UNCOMP[284] @ 2272
+     303 0000011c 00002FDA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[285] @ 2280
+     304 0000011c 002A2FDA          .bits   42,8                    ; pixel_play34BPP_UNCOMP[286] @ 2288
+     305 0000011c 2A2A2FDA          .bits   42,8                    ; pixel_play34BPP_UNCOMP[287] @ 2296
+     306 00000120 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[288] @ 2304
+     307 00000120 0000AFAA          .bits   175,8                   ; pixel_play34BPP_UNCOMP[289] @ 2312
+     308 00000120 002FAFAA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[290] @ 2320
+     309 00000120 2F2FAFAA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[291] @ 2328
+     310 00000124 000000F0          .bits   240,8                   ; pixel_play34BPP_UNCOMP[292] @ 2336
+     311 00000124 000020F0          .bits   32,8                    ; pixel_play34BPP_UNCOMP[293] @ 2344
+     312 00000124 002A20F0          .bits   42,8                    ; pixel_play34BPP_UNCOMP[294] @ 2352
+     313 00000124 D52A20F0          .bits   213,8                   ; pixel_play34BPP_UNCOMP[295] @ 2360
+     314 00000128 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[296] @ 2368
+     315 00000128 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[297] @ 2376
+     316 00000128 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[298] @ 2384
+     317 00000128 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[299] @ 2392
+     318 0000012c 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[300] @ 2400
+     319 0000012c 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[301] @ 2408
+     320 0000012c 009D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[302] @ 2416
+     321 0000012c 9D9D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[303] @ 2424
+     322 00000130 0000006A          .bits   106,8                   ; pixel_play34BPP_UNCOMP[304] @ 2432
+     323 00000130 00000F6A          .bits   15,8                    ; pixel_play34BPP_UNCOMP[305] @ 2440
+     324 00000130 00AF0F6A          .bits   175,8                   ; pixel_play34BPP_UNCOMP[306] @ 2448
+     325 00000130 0AAF0F6A          .bits   10,8                    ; pixel_play34BPP_UNCOMP[307] @ 2456
+     326 00000134 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[308] @ 2464
+     327 00000134 0000AFAA          .bits   175,8                   ; pixel_play34BPP_UNCOMP[309] @ 2472
+     328 00000134 000FAFAA          .bits   15,8                    ; pixel_play34BPP_UNCOMP[310] @ 2480
+     329 00000134 0A0FAFAA          .bits   10,8                    ; pixel_play34BPP_UNCOMP[311] @ 2488
+     330 00000138 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[312] @ 2496
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    7
+
+     331 00000138 00000FAA          .bits   15,8                    ; pixel_play34BPP_UNCOMP[313] @ 2504
+     332 00000138 000A0FAA          .bits   10,8                    ; pixel_play34BPP_UNCOMP[314] @ 2512
+     333 00000138 9D0A0FAA          .bits   157,8                   ; pixel_play34BPP_UNCOMP[315] @ 2520
+     334 0000013c 00000091          .bits   145,8                   ; pixel_play34BPP_UNCOMP[316] @ 2528
+     335 0000013c 00009D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[317] @ 2536
+     336 0000013c 009D9D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[318] @ 2544
+     337 0000013c 9D9D9D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[319] @ 2552
+     338 00000140 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[320] @ 2560
+     339 00000140 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[321] @ 2568
+     340 00000140 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[322] @ 2576
+     341 00000140 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[323] @ 2584
+     342 00000144 000000A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[324] @ 2592
+     343 00000144 000020A0          .bits   32,8                    ; pixel_play34BPP_UNCOMP[325] @ 2600
+     344 00000144 00A020A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[326] @ 2608
+     345 00000144 2AA020A0          .bits   42,8                    ; pixel_play34BPP_UNCOMP[327] @ 2616
+     346 00000148 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[328] @ 2624
+     347 00000148 0000A0AA          .bits   160,8                   ; pixel_play34BPP_UNCOMP[329] @ 2632
+     348 00000148 0020A0AA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[330] @ 2640
+     349 00000148 AF20A0AA          .bits   175,8                   ; pixel_play34BPP_UNCOMP[331] @ 2648
+     350 0000014c 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[332] @ 2656
+     351 0000014c 0000A020          .bits   160,8                   ; pixel_play34BPP_UNCOMP[333] @ 2664
+     352 0000014c 0020A020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[334] @ 2672
+     353 0000014c A620A020          .bits   166,8                   ; pixel_play34BPP_UNCOMP[335] @ 2680
+     354 00000150 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[336] @ 2688
+     355 00000150 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[337] @ 2696
+     356 00000150 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[338] @ 2704
+     357 00000150 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[339] @ 2712
+     358 00000154 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[340] @ 2720
+     359 00000154 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[341] @ 2728
+     360 00000154 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[342] @ 2736
+     361 00000154 619D6D9D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[343] @ 2744
+     362 00000158 000000A2          .bits   162,8                   ; pixel_play34BPP_UNCOMP[344] @ 2752
+     363 00000158 000002A2          .bits   2,8                     ; pixel_play34BPP_UNCOMP[345] @ 2760
+     364 00000158 00AF02A2          .bits   175,8                   ; pixel_play34BPP_UNCOMP[346] @ 2768
+     365 00000158 0AAF02A2          .bits   10,8                    ; pixel_play34BPP_UNCOMP[347] @ 2776
+     366 0000015c 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[348] @ 2784
+     367 0000015c 0000AFAA          .bits   175,8                   ; pixel_play34BPP_UNCOMP[349] @ 2792
+     368 0000015c 0002AFAA          .bits   2,8                     ; pixel_play34BPP_UNCOMP[350] @ 2800
+     369 0000015c 0F02AFAA          .bits   15,8                    ; pixel_play34BPP_UNCOMP[351] @ 2808
+     370 00000160 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[352] @ 2816
+     371 00000160 00000F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[353] @ 2824
+     372 00000160 00020F0F          .bits   2,8                     ; pixel_play34BPP_UNCOMP[354] @ 2832
+     373 00000160 A1020F0F          .bits   161,8                   ; pixel_play34BPP_UNCOMP[355] @ 2840
+     374 00000164 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[356] @ 2848
+     375 00000164 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[357] @ 2856
+     376 00000164 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[358] @ 2864
+     377 00000164 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[359] @ 2872
+     378 00000168 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[360] @ 2880
+     379 00000168 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[361] @ 2888
+     380 00000168 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[362] @ 2896
+     381 00000168 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[363] @ 2904
+     382 0000016c 000000A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[364] @ 2912
+     383 0000016c 00002FA0          .bits   47,8                    ; pixel_play34BPP_UNCOMP[365] @ 2920
+     384 0000016c 002A2FA0          .bits   42,8                    ; pixel_play34BPP_UNCOMP[366] @ 2928
+     385 0000016c AA2A2FA0          .bits   170,8                   ; pixel_play34BPP_UNCOMP[367] @ 2936
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    8
+
+     386 00000170 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[368] @ 2944
+     387 00000170 00002FAA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[369] @ 2952
+     388 00000170 00F02FAA          .bits   240,8                   ; pixel_play34BPP_UNCOMP[370] @ 2960
+     389 00000170 2FF02FAA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[371] @ 2968
+     390 00000174 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[372] @ 2976
+     391 00000174 00002020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[373] @ 2984
+     392 00000174 00202020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[374] @ 2992
+     393 00000174 A6202020          .bits   166,8                   ; pixel_play34BPP_UNCOMP[375] @ 3000
+     394 00000178 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[376] @ 3008
+     395 00000178 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[377] @ 3016
+     396 00000178 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[378] @ 3024
+     397 00000178 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[379] @ 3032
+     398 0000017c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[380] @ 3040
+     399 0000017c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[381] @ 3048
+     400 0000017c 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[382] @ 3056
+     401 0000017c 919D9D9D          .bits   145,8                   ; pixel_play34BPP_UNCOMP[383] @ 3064
+     402 00000180 000000A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[384] @ 3072
+     403 00000180 00000FA0          .bits   15,8                    ; pixel_play34BPP_UNCOMP[385] @ 3080
+     404 00000180 000F0FA0          .bits   15,8                    ; pixel_play34BPP_UNCOMP[386] @ 3088
+     405 00000180 0F0F0FA0          .bits   15,8                    ; pixel_play34BPP_UNCOMP[387] @ 3096
+     406 00000184 0000000A          .bits   10,8                    ; pixel_play34BPP_UNCOMP[388] @ 3104
+     407 00000184 0000AA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[389] @ 3112
+     408 00000184 00AAAA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[390] @ 3120
+     409 00000184 AAAAAA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[391] @ 3128
+     410 00000188 000000AF          .bits   175,8                   ; pixel_play34BPP_UNCOMP[392] @ 3136
+     411 00000188 000002AF          .bits   2,8                     ; pixel_play34BPP_UNCOMP[393] @ 3144
+     412 00000188 000202AF          .bits   2,8                     ; pixel_play34BPP_UNCOMP[394] @ 3152
+     413 00000188 A10202AF          .bits   161,8                   ; pixel_play34BPP_UNCOMP[395] @ 3160
+     414 0000018c 0000006D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[396] @ 3168
+     415 0000018c 00009D6D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[397] @ 3176
+     416 0000018c 009D9D6D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[398] @ 3184
+     417 0000018c 9D9D9D6D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[399] @ 3192
+     418 00000190 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[400] @ 3200
+     419 00000190 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[401] @ 3208
+     420 00000190 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[402] @ 3216
+     421 00000190 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[403] @ 3224
+     422 00000194 000000CA          .bits   202,8                   ; pixel_play34BPP_UNCOMP[404] @ 3232
+     423 00000194 000020CA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[405] @ 3240
+     424 00000194 002F20CA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[406] @ 3248
+     425 00000194 202F20CA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[407] @ 3256
+     426 00000198 0000002A          .bits   42,8                    ; pixel_play34BPP_UNCOMP[408] @ 3264
+     427 00000198 0000AA2A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[409] @ 3272
+     428 00000198 00AAAA2A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[410] @ 3280
+     429 00000198 AAAAAA2A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[411] @ 3288
+     430 0000019c 000000A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[412] @ 3296
+     431 0000019c 000020A0          .bits   32,8                    ; pixel_play34BPP_UNCOMP[413] @ 3304
+     432 0000019c 002220A0          .bits   34,8                    ; pixel_play34BPP_UNCOMP[414] @ 3312
+     433 0000019c A62220A0          .bits   166,8                   ; pixel_play34BPP_UNCOMP[415] @ 3320
+     434 000001a0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[416] @ 3328
+     435 000001a0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[417] @ 3336
+     436 000001a0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[418] @ 3344
+     437 000001a0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[419] @ 3352
+     438 000001a4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[420] @ 3360
+     439 000001a4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[421] @ 3368
+     440 000001a4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[422] @ 3376
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE    9
+
+     441 000001a4 619D6D9D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[423] @ 3384
+     442 000001a8 0000006A          .bits   106,8                   ; pixel_play34BPP_UNCOMP[424] @ 3392
+     443 000001a8 00000F6A          .bits   15,8                    ; pixel_play34BPP_UNCOMP[425] @ 3400
+     444 000001a8 00020F6A          .bits   2,8                     ; pixel_play34BPP_UNCOMP[426] @ 3408
+     445 000001a8 0F020F6A          .bits   15,8                    ; pixel_play34BPP_UNCOMP[427] @ 3416
+     446 000001ac 0000000A          .bits   10,8                    ; pixel_play34BPP_UNCOMP[428] @ 3424
+     447 000001ac 0000AA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[429] @ 3432
+     448 000001ac 00AAAA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[430] @ 3440
+     449 000001ac AAAAAA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[431] @ 3448
+     450 000001b0 000000AF          .bits   175,8                   ; pixel_play34BPP_UNCOMP[432] @ 3456
+     451 000001b0 00000FAF          .bits   15,8                    ; pixel_play34BPP_UNCOMP[433] @ 3464
+     452 000001b0 000A0FAF          .bits   10,8                    ; pixel_play34BPP_UNCOMP[434] @ 3472
+     453 000001b0 610A0FAF          .bits   97,8                    ; pixel_play34BPP_UNCOMP[435] @ 3480
+     454 000001b4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[436] @ 3488
+     455 000001b4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[437] @ 3496
+     456 000001b4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[438] @ 3504
+     457 000001b4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[439] @ 3512
+     458 000001b8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[440] @ 3520
+     459 000001b8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[441] @ 3528
+     460 000001b8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[442] @ 3536
+     461 000001b8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[443] @ 3544
+     462 000001bc 000000A0          .bits   160,8                   ; pixel_play34BPP_UNCOMP[444] @ 3552
+     463 000001bc 0000AAA0          .bits   170,8                   ; pixel_play34BPP_UNCOMP[445] @ 3560
+     464 000001bc 0020AAA0          .bits   32,8                    ; pixel_play34BPP_UNCOMP[446] @ 3568
+     465 000001bc 2F20AAA0          .bits   47,8                    ; pixel_play34BPP_UNCOMP[447] @ 3576
+     466 000001c0 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[448] @ 3584
+     467 000001c0 0000AA20          .bits   170,8                   ; pixel_play34BPP_UNCOMP[449] @ 3592
+     468 000001c0 00AAAA20          .bits   170,8                   ; pixel_play34BPP_UNCOMP[450] @ 3600
+     469 000001c0 AAAAAA20          .bits   170,8                   ; pixel_play34BPP_UNCOMP[451] @ 3608
+     470 000001c4 000000F0          .bits   240,8                   ; pixel_play34BPP_UNCOMP[452] @ 3616
+     471 000001c4 000020F0          .bits   32,8                    ; pixel_play34BPP_UNCOMP[453] @ 3624
+     472 000001c4 00AA20F0          .bits   170,8                   ; pixel_play34BPP_UNCOMP[454] @ 3632
+     473 000001c4 D6AA20F0          .bits   214,8                   ; pixel_play34BPP_UNCOMP[455] @ 3640
+     474 000001c8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[456] @ 3648
+     475 000001c8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[457] @ 3656
+     476 000001c8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[458] @ 3664
+     477 000001c8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[459] @ 3672
+     478 000001cc 00000091          .bits   145,8                   ; pixel_play34BPP_UNCOMP[460] @ 3680
+     479 000001cc 00009D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[461] @ 3688
+     480 000001cc 00919D91          .bits   145,8                   ; pixel_play34BPP_UNCOMP[462] @ 3696
+     481 000001cc 9D919D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[463] @ 3704
+     482 000001d0 000000A2          .bits   162,8                   ; pixel_play34BPP_UNCOMP[464] @ 3712
+     483 000001d0 000002A2          .bits   2,8                     ; pixel_play34BPP_UNCOMP[465] @ 3720
+     484 000001d0 00AA02A2          .bits   170,8                   ; pixel_play34BPP_UNCOMP[466] @ 3728
+     485 000001d0 0FAA02A2          .bits   15,8                    ; pixel_play34BPP_UNCOMP[467] @ 3736
+     486 000001d4 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[468] @ 3744
+     487 000001d4 00000A0F          .bits   10,8                    ; pixel_play34BPP_UNCOMP[469] @ 3752
+     488 000001d4 00AA0A0F          .bits   170,8                   ; pixel_play34BPP_UNCOMP[470] @ 3760
+     489 000001d4 A2AA0A0F          .bits   162,8                   ; pixel_play34BPP_UNCOMP[471] @ 3768
+     490 000001d8 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[472] @ 3776
+     491 000001d8 0000AA0F          .bits   170,8                   ; pixel_play34BPP_UNCOMP[473] @ 3784
+     492 000001d8 0002AA0F          .bits   2,8                     ; pixel_play34BPP_UNCOMP[474] @ 3792
+     493 000001d8 A102AA0F          .bits   161,8                   ; pixel_play34BPP_UNCOMP[475] @ 3800
+     494 000001dc 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[476] @ 3808
+     495 000001dc 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[477] @ 3816
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   10
+
+     496 000001dc 009D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[478] @ 3824
+     497 000001dc 9D9D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[479] @ 3832
+     498 000001e0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[480] @ 3840
+     499 000001e0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[481] @ 3848
+     500 000001e0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[482] @ 3856
+     501 000001e0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[483] @ 3864
+     502 000001e4 000000DA          .bits   218,8                   ; pixel_play34BPP_UNCOMP[484] @ 3872
+     503 000001e4 000020DA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[485] @ 3880
+     504 000001e4 002F20DA          .bits   47,8                    ; pixel_play34BPP_UNCOMP[486] @ 3888
+     505 000001e4 AA2F20DA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[487] @ 3896
+     506 000001e8 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[488] @ 3904
+     507 000001e8 00002020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[489] @ 3912
+     508 000001e8 002F2020          .bits   47,8                    ; pixel_play34BPP_UNCOMP[490] @ 3920
+     509 000001e8 202F2020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[491] @ 3928
+     510 000001ec 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[492] @ 3936
+     511 000001ec 000020AA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[493] @ 3944
+     512 000001ec 002020AA          .bits   32,8                    ; pixel_play34BPP_UNCOMP[494] @ 3952
+     513 000001ec A62020AA          .bits   166,8                   ; pixel_play34BPP_UNCOMP[495] @ 3960
+     514 000001f0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[496] @ 3968
+     515 000001f0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[497] @ 3976
+     516 000001f0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[498] @ 3984
+     517 000001f0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[499] @ 3992
+     518 000001f4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[500] @ 4000
+     519 000001f4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[501] @ 4008
+     520 000001f4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[502] @ 4016
+     521 000001f4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[503] @ 4024
+     522 000001f8 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[504] @ 4032
+     523 000001f8 0000AA61          .bits   170,8                   ; pixel_play34BPP_UNCOMP[505] @ 4040
+     524 000001f8 0002AA61          .bits   2,8                     ; pixel_play34BPP_UNCOMP[506] @ 4048
+     525 000001f8 0F02AA61          .bits   15,8                    ; pixel_play34BPP_UNCOMP[507] @ 4056
+     526 000001fc 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[508] @ 4064
+     527 000001fc 0000AAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[509] @ 4072
+     528 000001fc 00AAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[510] @ 4080
+     529 000001fc AAAAAAAA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[511] @ 4088
+     530 00000200 00000002          .bits   2,8                     ; pixel_play34BPP_UNCOMP[512] @ 4096
+     531 00000200 00000F02          .bits   15,8                    ; pixel_play34BPP_UNCOMP[513] @ 4104
+     532 00000200 00AA0F02          .bits   170,8                   ; pixel_play34BPP_UNCOMP[514] @ 4112
+     533 00000200 6DAA0F02          .bits   109,8                   ; pixel_play34BPP_UNCOMP[515] @ 4120
+     534 00000204 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[516] @ 4128
+     535 00000204 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[517] @ 4136
+     536 00000204 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[518] @ 4144
+     537 00000204 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[519] @ 4152
+     538 00000208 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[520] @ 4160
+     539 00000208 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[521] @ 4168
+     540 00000208 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[522] @ 4176
+     541 00000208 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[523] @ 4184
+     542 0000020c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[524] @ 4192
+     543 0000020c 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[525] @ 4200
+     544 0000020c 00A0D6D6          .bits   160,8                   ; pixel_play34BPP_UNCOMP[526] @ 4208
+     545 0000020c 20A0D6D6          .bits   32,8                    ; pixel_play34BPP_UNCOMP[527] @ 4216
+     546 00000210 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[528] @ 4224
+     547 00000210 00002F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[529] @ 4232
+     548 00000210 00202F20          .bits   32,8                    ; pixel_play34BPP_UNCOMP[530] @ 4240
+     549 00000210 2F202F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[531] @ 4248
+     550 00000214 0000002F          .bits   47,8                    ; pixel_play34BPP_UNCOMP[532] @ 4256
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   11
+
+     551 00000214 0000AA2F          .bits   170,8                   ; pixel_play34BPP_UNCOMP[533] @ 4264
+     552 00000214 00C6AA2F          .bits   198,8                   ; pixel_play34BPP_UNCOMP[534] @ 4272
+     553 00000214 D6C6AA2F          .bits   214,8                   ; pixel_play34BPP_UNCOMP[535] @ 4280
+     554 00000218 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[536] @ 4288
+     555 00000218 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[537] @ 4296
+     556 00000218 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[538] @ 4304
+     557 00000218 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[539] @ 4312
+     558 0000021c 00000095          .bits   149,8                   ; pixel_play34BPP_UNCOMP[540] @ 4320
+     559 0000021c 00009D95          .bits   157,8                   ; pixel_play34BPP_UNCOMP[541] @ 4328
+     560 0000021c 00619D95          .bits   97,8                    ; pixel_play34BPP_UNCOMP[542] @ 4336
+     561 0000021c 9D619D95          .bits   157,8                   ; pixel_play34BPP_UNCOMP[543] @ 4344
+     562 00000220 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[544] @ 4352
+     563 00000220 00009161          .bits   145,8                   ; pixel_play34BPP_UNCOMP[545] @ 4360
+     564 00000220 00A09161          .bits   160,8                   ; pixel_play34BPP_UNCOMP[546] @ 4368
+     565 00000220 0FA09161          .bits   15,8                    ; pixel_play34BPP_UNCOMP[547] @ 4376
+     566 00000224 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[548] @ 4384
+     567 00000224 00000F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[549] @ 4392
+     568 00000224 000F0F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[550] @ 4400
+     569 00000224 0F0F0F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[551] @ 4408
+     570 00000228 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[552] @ 4416
+     571 00000228 00000A0F          .bits   10,8                    ; pixel_play34BPP_UNCOMP[553] @ 4424
+     572 00000228 00610A0F          .bits   97,8                    ; pixel_play34BPP_UNCOMP[554] @ 4432
+     573 00000228 9D610A0F          .bits   157,8                   ; pixel_play34BPP_UNCOMP[555] @ 4440
+     574 0000022c 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[556] @ 4448
+     575 0000022c 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[557] @ 4456
+     576 0000022c 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[558] @ 4464
+     577 0000022c 9D9D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[559] @ 4472
+     578 00000230 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[560] @ 4480
+     579 00000230 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[561] @ 4488
+     580 00000230 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[562] @ 4496
+     581 00000230 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[563] @ 4504
+     582 00000234 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[564] @ 4512
+     583 00000234 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[565] @ 4520
+     584 00000234 00CAD6D6          .bits   202,8                   ; pixel_play34BPP_UNCOMP[566] @ 4528
+     585 00000234 20CAD6D6          .bits   32,8                    ; pixel_play34BPP_UNCOMP[567] @ 4536
+     586 00000238 0000002F          .bits   47,8                    ; pixel_play34BPP_UNCOMP[568] @ 4544
+     587 00000238 0000202F          .bits   32,8                    ; pixel_play34BPP_UNCOMP[569] @ 4552
+     588 00000238 002F202F          .bits   47,8                    ; pixel_play34BPP_UNCOMP[570] @ 4560
+     589 00000238 202F202F          .bits   32,8                    ; pixel_play34BPP_UNCOMP[571] @ 4568
+     590 0000023c 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[572] @ 4576
+     591 0000023c 00002A20          .bits   42,8                    ; pixel_play34BPP_UNCOMP[573] @ 4584
+     592 0000023c 00C62A20          .bits   198,8                   ; pixel_play34BPP_UNCOMP[574] @ 4592
+     593 0000023c D6C62A20          .bits   214,8                   ; pixel_play34BPP_UNCOMP[575] @ 4600
+     594 00000240 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[576] @ 4608
+     595 00000240 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[577] @ 4616
+     596 00000240 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[578] @ 4624
+     597 00000240 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[579] @ 4632
+     598 00000244 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[580] @ 4640
+     599 00000244 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[581] @ 4648
+     600 00000244 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[582] @ 4656
+     601 00000244 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[583] @ 4664
+     602 00000248 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[584] @ 4672
+     603 00000248 0000619D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[585] @ 4680
+     604 00000248 006A619D          .bits   106,8                   ; pixel_play34BPP_UNCOMP[586] @ 4688
+     605 00000248 0F6A619D          .bits   15,8                    ; pixel_play34BPP_UNCOMP[587] @ 4696
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   12
+
+     606 0000024c 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[588] @ 4704
+     607 0000024c 00000F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[589] @ 4712
+     608 0000024c 00020F0F          .bits   2,8                     ; pixel_play34BPP_UNCOMP[590] @ 4720
+     609 0000024c 0F020F0F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[591] @ 4728
+     610 00000250 0000000F          .bits   15,8                    ; pixel_play34BPP_UNCOMP[592] @ 4736
+     611 00000250 0000000F          .bits   0,8                     ; pixel_play34BPP_UNCOMP[593] @ 4744
+     612 00000250 00AA000F          .bits   170,8                   ; pixel_play34BPP_UNCOMP[594] @ 4752
+     613 00000250 6DAA000F          .bits   109,8                   ; pixel_play34BPP_UNCOMP[595] @ 4760
+     614 00000254 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[596] @ 4768
+     615 00000254 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[597] @ 4776
+     616 00000254 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[598] @ 4784
+     617 00000254 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[599] @ 4792
+     618 00000258 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[600] @ 4800
+     619 00000258 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[601] @ 4808
+     620 00000258 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[602] @ 4816
+     621 00000258 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[603] @ 4824
+     622 0000025c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[604] @ 4832
+     623 0000025c 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[605] @ 4840
+     624 0000025c 00CAD6D6          .bits   202,8                   ; pixel_play34BPP_UNCOMP[606] @ 4848
+     625 0000025c 20CAD6D6          .bits   32,8                    ; pixel_play34BPP_UNCOMP[607] @ 4856
+     626 00000260 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[608] @ 4864
+     627 00000260 00002F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[609] @ 4872
+     628 00000260 00202F20          .bits   32,8                    ; pixel_play34BPP_UNCOMP[610] @ 4880
+     629 00000260 2F202F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[611] @ 4888
+     630 00000264 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[612] @ 4896
+     631 00000264 00002F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[613] @ 4904
+     632 00000264 00202F20          .bits   32,8                    ; pixel_play34BPP_UNCOMP[614] @ 4912
+     633 00000264 A6202F20          .bits   166,8                   ; pixel_play34BPP_UNCOMP[615] @ 4920
+     634 00000268 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[616] @ 4928
+     635 00000268 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[617] @ 4936
+     636 00000268 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[618] @ 4944
+     637 00000268 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[619] @ 4952
+     638 0000026c 00000091          .bits   145,8                   ; pixel_play34BPP_UNCOMP[620] @ 4960
+     639 0000026c 00009D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[621] @ 4968
+     640 0000026c 00919D91          .bits   145,8                   ; pixel_play34BPP_UNCOMP[622] @ 4976
+     641 0000026c 9D919D91          .bits   157,8                   ; pixel_play34BPP_UNCOMP[623] @ 4984
+     642 00000270 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[624] @ 4992
+     643 00000270 0000919D          .bits   145,8                   ; pixel_play34BPP_UNCOMP[625] @ 5000
+     644 00000270 006A919D          .bits   106,8                   ; pixel_play34BPP_UNCOMP[626] @ 5008
+     645 00000270 026A919D          .bits   2,8                     ; pixel_play34BPP_UNCOMP[627] @ 5016
+     646 00000274 00000000          .bits   0,8                     ; pixel_play34BPP_UNCOMP[628] @ 5024
+     647 00000274 00000200          .bits   2,8                     ; pixel_play34BPP_UNCOMP[629] @ 5032
+     648 00000274 00000200          .bits   0,8                     ; pixel_play34BPP_UNCOMP[630] @ 5040
+     649 00000274 02000200          .bits   2,8                     ; pixel_play34BPP_UNCOMP[631] @ 5048
+     650 00000278 000000AA          .bits   170,8                   ; pixel_play34BPP_UNCOMP[632] @ 5056
+     651 00000278 0000A2AA          .bits   162,8                   ; pixel_play34BPP_UNCOMP[633] @ 5064
+     652 00000278 0002A2AA          .bits   2,8                     ; pixel_play34BPP_UNCOMP[634] @ 5072
+     653 00000278 A102A2AA          .bits   161,8                   ; pixel_play34BPP_UNCOMP[635] @ 5080
+     654 0000027c 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[636] @ 5088
+     655 0000027c 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[637] @ 5096
+     656 0000027c 009D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[638] @ 5104
+     657 0000027c 9D9D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[639] @ 5112
+     658 00000280 000000D5          .bits   213,8                   ; pixel_play34BPP_UNCOMP[640] @ 5120
+     659 00000280 0000D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[641] @ 5128
+     660 00000280 00D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[642] @ 5136
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   13
+
+     661 00000280 D6D6D6D5          .bits   214,8                   ; pixel_play34BPP_UNCOMP[643] @ 5144
+     662 00000284 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[644] @ 5152
+     663 00000284 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[645] @ 5160
+     664 00000284 00CAD6D6          .bits   202,8                   ; pixel_play34BPP_UNCOMP[646] @ 5168
+     665 00000284 20CAD6D6          .bits   32,8                    ; pixel_play34BPP_UNCOMP[647] @ 5176
+     666 00000288 00000020          .bits   32,8                    ; pixel_play34BPP_UNCOMP[648] @ 5184
+     667 00000288 00002F20          .bits   47,8                    ; pixel_play34BPP_UNCOMP[649] @ 5192
+     668 00000288 00AA2F20          .bits   170,8                   ; pixel_play34BPP_UNCOMP[650] @ 5200
+     669 00000288 AAAA2F20          .bits   170,8                   ; pixel_play34BPP_UNCOMP[651] @ 5208
+     670 0000028c 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[652] @ 5216
+     671 0000028c 0000CAD6          .bits   202,8                   ; pixel_play34BPP_UNCOMP[653] @ 5224
+     672 0000028c 00AACAD6          .bits   170,8                   ; pixel_play34BPP_UNCOMP[654] @ 5232
+     673 0000028c 66AACAD6          .bits   102,8                   ; pixel_play34BPP_UNCOMP[655] @ 5240
+     674 00000290 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[656] @ 5248
+     675 00000290 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[657] @ 5256
+     676 00000290 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[658] @ 5264
+     677 00000290 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[659] @ 5272
+     678 00000294 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[660] @ 5280
+     679 00000294 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[661] @ 5288
+     680 00000294 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[662] @ 5296
+     681 00000294 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[663] @ 5304
+     682 00000298 000000CD          .bits   205,8                   ; pixel_play34BPP_UNCOMP[664] @ 5312
+     683 00000298 000061CD          .bits   97,8                    ; pixel_play34BPP_UNCOMP[665] @ 5320
+     684 00000298 00A261CD          .bits   162,8                   ; pixel_play34BPP_UNCOMP[666] @ 5328
+     685 00000298 0FA261CD          .bits   15,8                    ; pixel_play34BPP_UNCOMP[667] @ 5336
+     686 0000029c 0000000A          .bits   10,8                    ; pixel_play34BPP_UNCOMP[668] @ 5344
+     687 0000029c 0000AA0A          .bits   170,8                   ; pixel_play34BPP_UNCOMP[669] @ 5352
+     688 0000029c 0061AA0A          .bits   97,8                    ; pixel_play34BPP_UNCOMP[670] @ 5360
+     689 0000029c 6161AA0A          .bits   97,8                    ; pixel_play34BPP_UNCOMP[671] @ 5368
+     690 000002a0 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[672] @ 5376
+     691 000002a0 0000619D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[673] @ 5384
+     692 000002a0 006D619D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[674] @ 5392
+     693 000002a0 616D619D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[675] @ 5400
+     694 000002a4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[676] @ 5408
+     695 000002a4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[677] @ 5416
+     696 000002a4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[678] @ 5424
+     697 000002a4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[679] @ 5432
+     698 000002a8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[680] @ 5440
+     699 000002a8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[681] @ 5448
+     700 000002a8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[682] @ 5456
+     701 000002a8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[683] @ 5464
+     702 000002ac 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[684] @ 5472
+     703 000002ac 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[685] @ 5480
+     704 000002ac 00A0D6D6          .bits   160,8                   ; pixel_play34BPP_UNCOMP[686] @ 5488
+     705 000002ac 20A0D6D6          .bits   32,8                    ; pixel_play34BPP_UNCOMP[687] @ 5496
+     706 000002b0 000000A6          .bits   166,8                   ; pixel_play34BPP_UNCOMP[688] @ 5504
+     707 000002b0 0000D6A6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[689] @ 5512
+     708 000002b0 00D6D6A6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[690] @ 5520
+     709 000002b0 D6D6D6A6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[691] @ 5528
+     710 000002b4 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[692] @ 5536
+     711 000002b4 0000DCD6          .bits   220,8                   ; pixel_play34BPP_UNCOMP[693] @ 5544
+     712 000002b4 00D6DCD6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[694] @ 5552
+     713 000002b4 D6D6DCD6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[695] @ 5560
+     714 000002b8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[696] @ 5568
+     715 000002b8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[697] @ 5576
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   14
+
+     716 000002b8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[698] @ 5584
+     717 000002b8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[699] @ 5592
+     718 000002bc 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[700] @ 5600
+     719 000002bc 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[701] @ 5608
+     720 000002bc 00619D9D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[702] @ 5616
+     721 000002bc 9D619D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[703] @ 5624
+     722 000002c0 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[704] @ 5632
+     723 000002c0 0000919D          .bits   145,8                   ; pixel_play34BPP_UNCOMP[705] @ 5640
+     724 000002c0 006A919D          .bits   106,8                   ; pixel_play34BPP_UNCOMP[706] @ 5648
+     725 000002c0 AA6A919D          .bits   170,8                   ; pixel_play34BPP_UNCOMP[707] @ 5656
+     726 000002c4 00000061          .bits   97,8                    ; pixel_play34BPP_UNCOMP[708] @ 5664
+     727 000002c4 00009D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[709] @ 5672
+     728 000002c4 009D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[710] @ 5680
+     729 000002c4 9D9D9D61          .bits   157,8                   ; pixel_play34BPP_UNCOMP[711] @ 5688
+     730 000002c8 00000095          .bits   149,8                   ; pixel_play34BPP_UNCOMP[712] @ 5696
+     731 000002c8 00009D95          .bits   157,8                   ; pixel_play34BPP_UNCOMP[713] @ 5704
+     732 000002c8 00959D95          .bits   149,8                   ; pixel_play34BPP_UNCOMP[714] @ 5712
+     733 000002c8 9D959D95          .bits   157,8                   ; pixel_play34BPP_UNCOMP[715] @ 5720
+     734 000002cc 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[716] @ 5728
+     735 000002cc 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[717] @ 5736
+     736 000002cc 009D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[718] @ 5744
+     737 000002cc 9D9D9D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[719] @ 5752
+     738 000002d0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[720] @ 5760
+     739 000002d0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[721] @ 5768
+     740 000002d0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[722] @ 5776
+     741 000002d0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[723] @ 5784
+     742 000002d4 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[724] @ 5792
+     743 000002d4 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[725] @ 5800
+     744 000002d4 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[726] @ 5808
+     745 000002d4 C6D6D6D6          .bits   198,8                   ; pixel_play34BPP_UNCOMP[727] @ 5816
+     746 000002d8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[728] @ 5824
+     747 000002d8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[729] @ 5832
+     748 000002d8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[730] @ 5840
+     749 000002d8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[731] @ 5848
+     750 000002dc 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[732] @ 5856
+     751 000002dc 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[733] @ 5864
+     752 000002dc 00D5D6D6          .bits   213,8                   ; pixel_play34BPP_UNCOMP[734] @ 5872
+     753 000002dc D6D5D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[735] @ 5880
+     754 000002e0 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[736] @ 5888
+     755 000002e0 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[737] @ 5896
+     756 000002e0 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[738] @ 5904
+     757 000002e0 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[739] @ 5912
+     758 000002e4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[740] @ 5920
+     759 000002e4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[741] @ 5928
+     760 000002e4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[742] @ 5936
+     761 000002e4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[743] @ 5944
+     762 000002e8 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[744] @ 5952
+     763 000002e8 00009D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[745] @ 5960
+     764 000002e8 00CD9D9D          .bits   205,8                   ; pixel_play34BPP_UNCOMP[746] @ 5968
+     765 000002e8 61CD9D9D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[747] @ 5976
+     766 000002ec 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[748] @ 5984
+     767 000002ec 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[749] @ 5992
+     768 000002ec 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[750] @ 6000
+     769 000002ec 9D9D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[751] @ 6008
+     770 000002f0 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[752] @ 6016
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   15
+
+     771 000002f0 0000619D          .bits   97,8                    ; pixel_play34BPP_UNCOMP[753] @ 6024
+     772 000002f0 009D619D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[754] @ 6032
+     773 000002f0 6D9D619D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[755] @ 6040
+     774 000002f4 0000009D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[756] @ 6048
+     775 000002f4 00006D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[757] @ 6056
+     776 000002f4 009D6D9D          .bits   157,8                   ; pixel_play34BPP_UNCOMP[758] @ 6064
+     777 000002f4 6D9D6D9D          .bits   109,8                   ; pixel_play34BPP_UNCOMP[759] @ 6072
+     778 000002f8 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[760] @ 6080
+     779 000002f8 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[761] @ 6088
+     780 000002f8 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[762] @ 6096
+     781 000002f8 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[763] @ 6104
+     782 000002fc 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[764] @ 6112
+     783 000002fc 0000D5D6          .bits   213,8                   ; pixel_play34BPP_UNCOMP[765] @ 6120
+     784 000002fc 00D6D5D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[766] @ 6128
+     785 000002fc D6D6D5D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[767] @ 6136
+     786 00000300 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[768] @ 6144
+     787 00000300 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[769] @ 6152
+     788 00000300 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[770] @ 6160
+     789 00000300 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[771] @ 6168
+     790 00000304 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[772] @ 6176
+     791 00000304 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[773] @ 6184
+     792 00000304 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[774] @ 6192
+     793 00000304 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[775] @ 6200
+     794 00000308 000000D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[776] @ 6208
+     795 00000308 0000D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[777] @ 6216
+     796 00000308 00D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[778] @ 6224
+     797 00000308 D6D6D6D6          .bits   214,8                   ; pixel_play34BPP_UNCOMP[779] @ 6232
+     798                    
+     799                    $C$DW$1 .dwtag  DW_TAG_variable
+     800                            .dwattr $C$DW$1, DW_AT_name("pixel_play34BPP_UNCOMP")
+     801                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("pixel_play34BPP_UNCOMP")
+     802                            .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$78)
+     803                            .dwattr $C$DW$1, DW_AT_location[DW_OP_addr pixel_play34BPP_UNCOMP]
+     804                            .dwattr $C$DW$1, DW_AT_decl_file("../image/play3.c")
+     805                            .dwattr $C$DW$1, DW_AT_decl_line(0x22)
+     806                            .dwattr $C$DW$1, DW_AT_decl_column(0x1c)
+     807                    
+     808 00000000                   .sect   ".const:palette_play34BPP_UNCOMP"
+     809                            .clink
+     810                            .align  4
+     811                            .elfsym palette_play34BPP_UNCOMP,SYM_SIZE(64)
+     812 00000000           palette_play34BPP_UNCOMP:
+     813 00000000 00F5FAF4          .bits   16120564,32                     ; palette_play34BPP_UNCOMP[0] @ 0
+     814 00000004 00346142          .bits   3432770,32                      ; palette_play34BPP_UNCOMP[1] @ 32
+     815 00000008 00EFF9F0          .bits   15727088,32                     ; palette_play34BPP_UNCOMP[2] @ 64
+     816 0000000c 00EFFCF3          .bits   15727859,32                     ; palette_play34BPP_UNCOMP[3] @ 96
+     817 00000010 00316340          .bits   3236672,32                      ; palette_play34BPP_UNCOMP[4] @ 128
+     818 00000014 002E623E          .bits   3039806,32                      ; palette_play34BPP_UNCOMP[5] @ 160
+     819 00000018 00375644          .bits   3626564,32                      ; palette_play34BPP_UNCOMP[6] @ 192
+     820 0000001c 00325D42          .bits   3300674,32                      ; palette_play34BPP_UNCOMP[7] @ 224
+     821 00000020 00010002          .bits   65538,32                        ; palette_play34BPP_UNCOMP[8] @ 256
+     822 00000024 0031603E          .bits   3235902,32                      ; palette_play34BPP_UNCOMP[9] @ 288
+     823 00000028 00000200          .bits   512,32                  ; palette_play34BPP_UNCOMP[10] @ 320
+     824 0000002c 00325F42          .bits   3301186,32                      ; palette_play34BPP_UNCOMP[11] @ 352
+     825 00000030 00325F40          .bits   3301184,32                      ; palette_play34BPP_UNCOMP[12] @ 384
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   16
+
+     826 00000034 002F6040          .bits   3104832,32                      ; palette_play34BPP_UNCOMP[13] @ 416
+     827 00000038 00316040          .bits   3235904,32                      ; palette_play34BPP_UNCOMP[14] @ 448
+     828 0000003c 00FFFFFF          .bits   16777215,32                     ; palette_play34BPP_UNCOMP[15] @ 480
+     829                    
+     830                    $C$DW$2 .dwtag  DW_TAG_variable
+     831                            .dwattr $C$DW$2, DW_AT_name("palette_play34BPP_UNCOMP")
+     832                            .dwattr $C$DW$2, DW_AT_TI_symbol_name("palette_play34BPP_UNCOMP")
+     833                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$94)
+     834                            .dwattr $C$DW$2, DW_AT_location[DW_OP_addr palette_play34BPP_UNCOMP]
+     835                            .dwattr $C$DW$2, DW_AT_decl_file("../image/play3.c")
+     836                            .dwattr $C$DW$2, DW_AT_decl_line(0x4d)
+     837                            .dwattr $C$DW$2, DW_AT_decl_column(0x1c)
+     838                    
+     839                            .global play34BPP_UNCOMP
+     840 00000000                   .sect   ".const:play34BPP_UNCOMP"
+     841                            .clink
+     842                            .align  4
+     843                            .elfsym play34BPP_UNCOMP,SYM_SIZE(16)
+     844 00000000           play34BPP_UNCOMP:
+     845 00000000 00000004          .bits   4,8                     ; play34BPP_UNCOMP.bPP @ 0
+     846 00000000 00000004          .bits   0,8
+     847 00000000 00280004          .bits   40,16                   ; play34BPP_UNCOMP.xSize @ 16
+     848 00000004 00000027          .bits   39,16                   ; play34BPP_UNCOMP.ySize @ 32
+     849 00000004 00100027          .bits   16,16                   ; play34BPP_UNCOMP.numColors @ 48
+     850 00000008 00000000!         .bits   palette_play34BPP_UNCOMP,32             ; play34BPP_UNCOMP.pPalette @ 64
+     851 0000000c 00000000!         .bits   pixel_play34BPP_UNCOMP,32               ; play34BPP_UNCOMP.pPixel @ 96
+     852                    
+     853                    $C$DW$3 .dwtag  DW_TAG_variable
+     854                            .dwattr $C$DW$3, DW_AT_name("play34BPP_UNCOMP")
+     855                            .dwattr $C$DW$3, DW_AT_TI_symbol_name("play34BPP_UNCOMP")
+     856                            .dwattr $C$DW$3, DW_AT_location[DW_OP_addr play34BPP_UNCOMP]
+     857                            .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$74)
+     858                            .dwattr $C$DW$3, DW_AT_external
+     859                            .dwattr $C$DW$3, DW_AT_decl_file("../image/play3.c")
+     860                            .dwattr $C$DW$3, DW_AT_decl_line(0x55)
+     861                            .dwattr $C$DW$3, DW_AT_decl_column(0x0f)
+     862                    
+     863                    ;       /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armopt /var/tmp/115981ewxFo /v
+     864                    
+     865                    ;******************************************************************************
+     866                    ;* BUILD ATTRIBUTES                                                           *
+     867                    ;******************************************************************************
+     868                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     869                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     870                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     871                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     872                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     873                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(0)
+     874                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(4)
+     875                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     876                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     877                            .battr "aeabi", Tag_File, 1, Tag_ABI_VFP_args(3)
+     878                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     879                    
+     880                    ;******************************************************************************
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   17
+
+     881                    ;* TYPE INFORMATION                                                           *
+     882                    ;******************************************************************************
+     883                    
+     884                    $C$DW$T$28      .dwtag  DW_TAG_structure_type
+     885                            .dwattr $C$DW$T$28, DW_AT_name("Graphics_Context")
+     886                            .dwattr $C$DW$T$28, DW_AT_byte_size(0x1c)
+     887                    $C$DW$4 .dwtag  DW_TAG_member
+     888                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$19)
+     889                            .dwattr $C$DW$4, DW_AT_name("size")
+     890                            .dwattr $C$DW$4, DW_AT_TI_symbol_name("size")
+     891                            .dwattr $C$DW$4, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     892                            .dwattr $C$DW$4, DW_AT_accessibility(DW_ACCESS_public)
+     893                            .dwattr $C$DW$4, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     894                            .dwattr $C$DW$4, DW_AT_decl_line(0xe8)
+     895                            .dwattr $C$DW$4, DW_AT_decl_column(0x0d)
+     896                    
+     897                    $C$DW$5 .dwtag  DW_TAG_member
+     898                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$22)
+     899                            .dwattr $C$DW$5, DW_AT_name("display")
+     900                            .dwattr $C$DW$5, DW_AT_TI_symbol_name("display")
+     901                            .dwattr $C$DW$5, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     902                            .dwattr $C$DW$5, DW_AT_accessibility(DW_ACCESS_public)
+     903                            .dwattr $C$DW$5, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     904                            .dwattr $C$DW$5, DW_AT_decl_line(0xe9)
+     905                            .dwattr $C$DW$5, DW_AT_decl_column(0x1d)
+     906                    
+     907                    $C$DW$6 .dwtag  DW_TAG_member
+     908                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$23)
+     909                            .dwattr $C$DW$6, DW_AT_name("clipRegion")
+     910                            .dwattr $C$DW$6, DW_AT_TI_symbol_name("clipRegion")
+     911                            .dwattr $C$DW$6, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     912                            .dwattr $C$DW$6, DW_AT_accessibility(DW_ACCESS_public)
+     913                            .dwattr $C$DW$6, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     914                            .dwattr $C$DW$6, DW_AT_decl_line(0xea)
+     915                            .dwattr $C$DW$6, DW_AT_decl_column(0x18)
+     916                    
+     917                    $C$DW$7 .dwtag  DW_TAG_member
+     918                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$24)
+     919                            .dwattr $C$DW$7, DW_AT_name("foreground")
+     920                            .dwattr $C$DW$7, DW_AT_TI_symbol_name("foreground")
+     921                            .dwattr $C$DW$7, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     922                            .dwattr $C$DW$7, DW_AT_accessibility(DW_ACCESS_public)
+     923                            .dwattr $C$DW$7, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     924                            .dwattr $C$DW$7, DW_AT_decl_line(0xeb)
+     925                            .dwattr $C$DW$7, DW_AT_decl_column(0x0e)
+     926                    
+     927                    $C$DW$8 .dwtag  DW_TAG_member
+     928                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$24)
+     929                            .dwattr $C$DW$8, DW_AT_name("background")
+     930                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("background")
+     931                            .dwattr $C$DW$8, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+     932                            .dwattr $C$DW$8, DW_AT_accessibility(DW_ACCESS_public)
+     933                            .dwattr $C$DW$8, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     934                            .dwattr $C$DW$8, DW_AT_decl_line(0xec)
+     935                            .dwattr $C$DW$8, DW_AT_decl_column(0x0e)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   18
+
+     936                    
+     937                    $C$DW$9 .dwtag  DW_TAG_member
+     938                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$27)
+     939                            .dwattr $C$DW$9, DW_AT_name("font")
+     940                            .dwattr $C$DW$9, DW_AT_TI_symbol_name("font")
+     941                            .dwattr $C$DW$9, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+     942                            .dwattr $C$DW$9, DW_AT_accessibility(DW_ACCESS_public)
+     943                            .dwattr $C$DW$9, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00
+     944                            .dwattr $C$DW$9, DW_AT_decl_line(0xed)
+     945                            .dwattr $C$DW$9, DW_AT_decl_column(0x1a)
+     946                    
+     947                            .dwattr $C$DW$T$28, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+     948                            .dwattr $C$DW$T$28, DW_AT_decl_line(0xe6)
+     949                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x10)
+     950                            .dwendtag $C$DW$T$28
+     951                    
+     952                    $C$DW$T$71      .dwtag  DW_TAG_typedef
+     953                            .dwattr $C$DW$T$71, DW_AT_name("Graphics_Context")
+     954                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$28)
+     955                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+     956                            .dwattr $C$DW$T$71, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+     957                            .dwattr $C$DW$T$71, DW_AT_decl_line(0xee)
+     958                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x03)
+     959                    
+     960                    
+     961                    $C$DW$T$33      .dwtag  DW_TAG_structure_type
+     962                            .dwattr $C$DW$T$33, DW_AT_name("Graphics_Display")
+     963                            .dwattr $C$DW$T$33, DW_AT_byte_size(0x10)
+     964                    $C$DW$10        .dwtag  DW_TAG_member
+     965                            .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$19)
+     966                            .dwattr $C$DW$10, DW_AT_name("size")
+     967                            .dwattr $C$DW$10, DW_AT_TI_symbol_name("size")
+     968                            .dwattr $C$DW$10, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     969                            .dwattr $C$DW$10, DW_AT_accessibility(DW_ACCESS_public)
+     970                            .dwattr $C$DW$10, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+     971                            .dwattr $C$DW$10, DW_AT_decl_line(0xb2)
+     972                            .dwattr $C$DW$10, DW_AT_decl_column(0x0d)
+     973                    
+     974                    $C$DW$11        .dwtag  DW_TAG_member
+     975                            .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$3)
+     976                            .dwattr $C$DW$11, DW_AT_name("displayData")
+     977                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("displayData")
+     978                            .dwattr $C$DW$11, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     979                            .dwattr $C$DW$11, DW_AT_accessibility(DW_ACCESS_public)
+     980                            .dwattr $C$DW$11, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+     981                            .dwattr $C$DW$11, DW_AT_decl_line(0xb3)
+     982                            .dwattr $C$DW$11, DW_AT_decl_column(0x0b)
+     983                    
+     984                    $C$DW$12        .dwtag  DW_TAG_member
+     985                            .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$29)
+     986                            .dwattr $C$DW$12, DW_AT_name("width")
+     987                            .dwattr $C$DW$12, DW_AT_TI_symbol_name("width")
+     988                            .dwattr $C$DW$12, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     989                            .dwattr $C$DW$12, DW_AT_accessibility(DW_ACCESS_public)
+     990                            .dwattr $C$DW$12, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   19
+
+     991                            .dwattr $C$DW$12, DW_AT_decl_line(0xb4)
+     992                            .dwattr $C$DW$12, DW_AT_decl_column(0x0e)
+     993                    
+     994                    $C$DW$13        .dwtag  DW_TAG_member
+     995                            .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$29)
+     996                            .dwattr $C$DW$13, DW_AT_name("heigth")
+     997                            .dwattr $C$DW$13, DW_AT_TI_symbol_name("heigth")
+     998                            .dwattr $C$DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+     999                            .dwattr $C$DW$13, DW_AT_accessibility(DW_ACCESS_public)
+    1000                            .dwattr $C$DW$13, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1001                            .dwattr $C$DW$13, DW_AT_decl_line(0xb5)
+    1002                            .dwattr $C$DW$13, DW_AT_decl_column(0x0e)
+    1003                    
+    1004                    $C$DW$14        .dwtag  DW_TAG_member
+    1005                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$32)
+    1006                            .dwattr $C$DW$14, DW_AT_name("pFxns")
+    1007                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("pFxns")
+    1008                            .dwattr $C$DW$14, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1009                            .dwattr $C$DW$14, DW_AT_accessibility(DW_ACCESS_public)
+    1010                            .dwattr $C$DW$14, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1011                            .dwattr $C$DW$14, DW_AT_decl_line(0xb6)
+    1012                            .dwattr $C$DW$14, DW_AT_decl_column(0x27)
+    1013                    
+    1014                            .dwattr $C$DW$T$33, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1015                            .dwattr $C$DW$T$33, DW_AT_decl_line(0xb0)
+    1016                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x08)
+    1017                            .dwendtag $C$DW$T$33
+    1018                    
+    1019                    $C$DW$T$20      .dwtag  DW_TAG_typedef
+    1020                            .dwattr $C$DW$T$20, DW_AT_name("Graphics_Display")
+    1021                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$33)
+    1022                            .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+    1023                            .dwattr $C$DW$T$20, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1024                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x66)
+    1025                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x21)
+    1026                    
+    1027                    $C$DW$T$21      .dwtag  DW_TAG_const_type
+    1028                            .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+    1029                    
+    1030                    $C$DW$T$22      .dwtag  DW_TAG_pointer_type
+    1031                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1032                            .dwattr $C$DW$T$22, DW_AT_address_class(0x20)
+    1033                    
+    1034                    
+    1035                    $C$DW$T$63      .dwtag  DW_TAG_structure_type
+    1036                            .dwattr $C$DW$T$63, DW_AT_name("Graphics_Display_Functions")
+    1037                            .dwattr $C$DW$T$63, DW_AT_byte_size(0x20)
+    1038                    $C$DW$15        .dwtag  DW_TAG_member
+    1039                            .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$37)
+    1040                            .dwattr $C$DW$15, DW_AT_name("pfnPixelDraw")
+    1041                            .dwattr $C$DW$15, DW_AT_TI_symbol_name("pfnPixelDraw")
+    1042                            .dwattr $C$DW$15, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1043                            .dwattr $C$DW$15, DW_AT_accessibility(DW_ACCESS_public)
+    1044                            .dwattr $C$DW$15, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1045                            .dwattr $C$DW$15, DW_AT_decl_line(0x72)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   20
+
+    1046                            .dwattr $C$DW$15, DW_AT_decl_column(0x12)
+    1047                    
+    1048                    $C$DW$16        .dwtag  DW_TAG_member
+    1049                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$45)
+    1050                            .dwattr $C$DW$16, DW_AT_name("pfnPixelDrawMultiple")
+    1051                            .dwattr $C$DW$16, DW_AT_TI_symbol_name("pfnPixelDrawMultiple")
+    1052                            .dwattr $C$DW$16, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1053                            .dwattr $C$DW$16, DW_AT_accessibility(DW_ACCESS_public)
+    1054                            .dwattr $C$DW$16, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1055                            .dwattr $C$DW$16, DW_AT_decl_line(0x79)
+    1056                            .dwattr $C$DW$16, DW_AT_decl_column(0x12)
+    1057                    
+    1058                    $C$DW$17        .dwtag  DW_TAG_member
+    1059                            .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$48)
+    1060                            .dwattr $C$DW$17, DW_AT_name("pfnLineDrawH")
+    1061                            .dwattr $C$DW$17, DW_AT_TI_symbol_name("pfnLineDrawH")
+    1062                            .dwattr $C$DW$17, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1063                            .dwattr $C$DW$17, DW_AT_accessibility(DW_ACCESS_public)
+    1064                            .dwattr $C$DW$17, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1065                            .dwattr $C$DW$17, DW_AT_decl_line(0x83)
+    1066                            .dwattr $C$DW$17, DW_AT_decl_column(0x12)
+    1067                    
+    1068                    $C$DW$18        .dwtag  DW_TAG_member
+    1069                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$48)
+    1070                            .dwattr $C$DW$18, DW_AT_name("pfnLineDrawV")
+    1071                            .dwattr $C$DW$18, DW_AT_TI_symbol_name("pfnLineDrawV")
+    1072                            .dwattr $C$DW$18, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1073                            .dwattr $C$DW$18, DW_AT_accessibility(DW_ACCESS_public)
+    1074                            .dwattr $C$DW$18, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1075                            .dwattr $C$DW$18, DW_AT_decl_line(0x8a)
+    1076                            .dwattr $C$DW$18, DW_AT_decl_column(0x12)
+    1077                    
+    1078                    $C$DW$19        .dwtag  DW_TAG_member
+    1079                            .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$53)
+    1080                            .dwattr $C$DW$19, DW_AT_name("pfnRectFill")
+    1081                            .dwattr $C$DW$19, DW_AT_TI_symbol_name("pfnRectFill")
+    1082                            .dwattr $C$DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1083                            .dwattr $C$DW$19, DW_AT_accessibility(DW_ACCESS_public)
+    1084                            .dwattr $C$DW$19, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1085                            .dwattr $C$DW$19, DW_AT_decl_line(0x91)
+    1086                            .dwattr $C$DW$19, DW_AT_decl_column(0x12)
+    1087                    
+    1088                    $C$DW$20        .dwtag  DW_TAG_member
+    1089                            .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$56)
+    1090                            .dwattr $C$DW$20, DW_AT_name("pfnColorTranslate")
+    1091                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("pfnColorTranslate")
+    1092                            .dwattr $C$DW$20, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1093                            .dwattr $C$DW$20, DW_AT_accessibility(DW_ACCESS_public)
+    1094                            .dwattr $C$DW$20, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1095                            .dwattr $C$DW$20, DW_AT_decl_line(0x99)
+    1096                            .dwattr $C$DW$20, DW_AT_decl_column(0x16)
+    1097                    
+    1098                    $C$DW$21        .dwtag  DW_TAG_member
+    1099                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$59)
+    1100                            .dwattr $C$DW$21, DW_AT_name("pfnFlush")
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   21
+
+    1101                            .dwattr $C$DW$21, DW_AT_TI_symbol_name("pfnFlush")
+    1102                            .dwattr $C$DW$21, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1103                            .dwattr $C$DW$21, DW_AT_accessibility(DW_ACCESS_public)
+    1104                            .dwattr $C$DW$21, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1105                            .dwattr $C$DW$21, DW_AT_decl_line(0xa0)
+    1106                            .dwattr $C$DW$21, DW_AT_decl_column(0x12)
+    1107                    
+    1108                    $C$DW$22        .dwtag  DW_TAG_member
+    1109                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$62)
+    1110                            .dwattr $C$DW$22, DW_AT_name("pfnClearDisplay")
+    1111                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("pfnClearDisplay")
+    1112                            .dwattr $C$DW$22, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    1113                            .dwattr $C$DW$22, DW_AT_accessibility(DW_ACCESS_public)
+    1114                            .dwattr $C$DW$22, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1115                            .dwattr $C$DW$22, DW_AT_decl_line(0xa6)
+    1116                            .dwattr $C$DW$22, DW_AT_decl_column(0x12)
+    1117                    
+    1118                            .dwattr $C$DW$T$63, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1119                            .dwattr $C$DW$T$63, DW_AT_decl_line(0x6d)
+    1120                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x10)
+    1121                            .dwendtag $C$DW$T$63
+    1122                    
+    1123                    $C$DW$T$30      .dwtag  DW_TAG_typedef
+    1124                            .dwattr $C$DW$T$30, DW_AT_name("Graphics_Display_Functions")
+    1125                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$63)
+    1126                            .dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+    1127                            .dwattr $C$DW$T$30, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1128                            .dwattr $C$DW$T$30, DW_AT_decl_line(0xa9)
+    1129                            .dwattr $C$DW$T$30, DW_AT_decl_column(0x01)
+    1130                    
+    1131                    $C$DW$T$31      .dwtag  DW_TAG_const_type
+    1132                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
+    1133                    
+    1134                    $C$DW$T$32      .dwtag  DW_TAG_pointer_type
+    1135                            .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$31)
+    1136                            .dwattr $C$DW$T$32, DW_AT_address_class(0x20)
+    1137                    
+    1138                    
+    1139                    $C$DW$T$65      .dwtag  DW_TAG_structure_type
+    1140                            .dwattr $C$DW$T$65, DW_AT_name("Graphics_Font")
+    1141                            .dwattr $C$DW$T$65, DW_AT_byte_size(0xc8)
+    1142                    $C$DW$23        .dwtag  DW_TAG_member
+    1143                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$38)
+    1144                            .dwattr $C$DW$23, DW_AT_name("format")
+    1145                            .dwattr $C$DW$23, DW_AT_TI_symbol_name("format")
+    1146                            .dwattr $C$DW$23, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1147                            .dwattr $C$DW$23, DW_AT_accessibility(DW_ACCESS_public)
+    1148                            .dwattr $C$DW$23, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1149                            .dwattr $C$DW$23, DW_AT_decl_line(0xc0)
+    1150                            .dwattr $C$DW$23, DW_AT_decl_column(0x0d)
+    1151                    
+    1152                    $C$DW$24        .dwtag  DW_TAG_member
+    1153                            .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$38)
+    1154                            .dwattr $C$DW$24, DW_AT_name("maxWidth")
+    1155                            .dwattr $C$DW$24, DW_AT_TI_symbol_name("maxWidth")
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   22
+
+    1156                            .dwattr $C$DW$24, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1157                            .dwattr $C$DW$24, DW_AT_accessibility(DW_ACCESS_public)
+    1158                            .dwattr $C$DW$24, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1159                            .dwattr $C$DW$24, DW_AT_decl_line(0xc1)
+    1160                            .dwattr $C$DW$24, DW_AT_decl_column(0x0d)
+    1161                    
+    1162                    $C$DW$25        .dwtag  DW_TAG_member
+    1163                            .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$38)
+    1164                            .dwattr $C$DW$25, DW_AT_name("height")
+    1165                            .dwattr $C$DW$25, DW_AT_TI_symbol_name("height")
+    1166                            .dwattr $C$DW$25, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1167                            .dwattr $C$DW$25, DW_AT_accessibility(DW_ACCESS_public)
+    1168                            .dwattr $C$DW$25, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1169                            .dwattr $C$DW$25, DW_AT_decl_line(0xc2)
+    1170                            .dwattr $C$DW$25, DW_AT_decl_column(0x0d)
+    1171                    
+    1172                    $C$DW$26        .dwtag  DW_TAG_member
+    1173                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$38)
+    1174                            .dwattr $C$DW$26, DW_AT_name("baseline")
+    1175                            .dwattr $C$DW$26, DW_AT_TI_symbol_name("baseline")
+    1176                            .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+    1177                            .dwattr $C$DW$26, DW_AT_accessibility(DW_ACCESS_public)
+    1178                            .dwattr $C$DW$26, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1179                            .dwattr $C$DW$26, DW_AT_decl_line(0xc3)
+    1180                            .dwattr $C$DW$26, DW_AT_decl_column(0x0d)
+    1181                    
+    1182                    $C$DW$27        .dwtag  DW_TAG_member
+    1183                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$64)
+    1184                            .dwattr $C$DW$27, DW_AT_name("offset")
+    1185                            .dwattr $C$DW$27, DW_AT_TI_symbol_name("offset")
+    1186                            .dwattr $C$DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1187                            .dwattr $C$DW$27, DW_AT_accessibility(DW_ACCESS_public)
+    1188                            .dwattr $C$DW$27, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1189                            .dwattr $C$DW$27, DW_AT_decl_line(0xc4)
+    1190                            .dwattr $C$DW$27, DW_AT_decl_column(0x0e)
+    1191                    
+    1192                    $C$DW$28        .dwtag  DW_TAG_member
+    1193                            .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$40)
+    1194                            .dwattr $C$DW$28, DW_AT_name("data")
+    1195                            .dwattr $C$DW$28, DW_AT_TI_symbol_name("data")
+    1196                            .dwattr $C$DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0xc4]
+    1197                            .dwattr $C$DW$28, DW_AT_accessibility(DW_ACCESS_public)
+    1198                            .dwattr $C$DW$28, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1199                            .dwattr $C$DW$28, DW_AT_decl_line(0xc5)
+    1200                            .dwattr $C$DW$28, DW_AT_decl_column(0x14)
+    1201                    
+    1202                            .dwattr $C$DW$T$65, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1203                            .dwattr $C$DW$T$65, DW_AT_decl_line(0xbe)
+    1204                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x10)
+    1205                            .dwendtag $C$DW$T$65
+    1206                    
+    1207                    $C$DW$T$25      .dwtag  DW_TAG_typedef
+    1208                            .dwattr $C$DW$T$25, DW_AT_name("Graphics_Font")
+    1209                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$65)
+    1210                            .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   23
+
+    1211                            .dwattr $C$DW$T$25, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1212                            .dwattr $C$DW$T$25, DW_AT_decl_line(0xc6)
+    1213                            .dwattr $C$DW$T$25, DW_AT_decl_column(0x03)
+    1214                    
+    1215                    $C$DW$T$26      .dwtag  DW_TAG_const_type
+    1216                            .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+    1217                    
+    1218                    $C$DW$T$27      .dwtag  DW_TAG_pointer_type
+    1219                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$26)
+    1220                            .dwattr $C$DW$T$27, DW_AT_address_class(0x20)
+    1221                    
+    1222                    
+    1223                    $C$DW$T$68      .dwtag  DW_TAG_structure_type
+    1224                            .dwattr $C$DW$T$68, DW_AT_name("Graphics_FontEx")
+    1225                            .dwattr $C$DW$T$68, DW_AT_byte_size(0x10)
+    1226                    $C$DW$29        .dwtag  DW_TAG_member
+    1227                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$38)
+    1228                            .dwattr $C$DW$29, DW_AT_name("format")
+    1229                            .dwattr $C$DW$29, DW_AT_TI_symbol_name("format")
+    1230                            .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1231                            .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+    1232                            .dwattr $C$DW$29, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1233                            .dwattr $C$DW$29, DW_AT_decl_line(0xd6)
+    1234                            .dwattr $C$DW$29, DW_AT_decl_column(0x0d)
+    1235                    
+    1236                    $C$DW$30        .dwtag  DW_TAG_member
+    1237                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$38)
+    1238                            .dwattr $C$DW$30, DW_AT_name("maxWidth")
+    1239                            .dwattr $C$DW$30, DW_AT_TI_symbol_name("maxWidth")
+    1240                            .dwattr $C$DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1241                            .dwattr $C$DW$30, DW_AT_accessibility(DW_ACCESS_public)
+    1242                            .dwattr $C$DW$30, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1243                            .dwattr $C$DW$30, DW_AT_decl_line(0xd7)
+    1244                            .dwattr $C$DW$30, DW_AT_decl_column(0x0d)
+    1245                    
+    1246                    $C$DW$31        .dwtag  DW_TAG_member
+    1247                            .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$38)
+    1248                            .dwattr $C$DW$31, DW_AT_name("height")
+    1249                            .dwattr $C$DW$31, DW_AT_TI_symbol_name("height")
+    1250                            .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1251                            .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
+    1252                            .dwattr $C$DW$31, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1253                            .dwattr $C$DW$31, DW_AT_decl_line(0xd8)
+    1254                            .dwattr $C$DW$31, DW_AT_decl_column(0x0d)
+    1255                    
+    1256                    $C$DW$32        .dwtag  DW_TAG_member
+    1257                            .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$38)
+    1258                            .dwattr $C$DW$32, DW_AT_name("baseline")
+    1259                            .dwattr $C$DW$32, DW_AT_TI_symbol_name("baseline")
+    1260                            .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+    1261                            .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+    1262                            .dwattr $C$DW$32, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1263                            .dwattr $C$DW$32, DW_AT_decl_line(0xd9)
+    1264                            .dwattr $C$DW$32, DW_AT_decl_column(0x0d)
+    1265                    
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   24
+
+    1266                    $C$DW$33        .dwtag  DW_TAG_member
+    1267                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$38)
+    1268                            .dwattr $C$DW$33, DW_AT_name("first")
+    1269                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("first")
+    1270                            .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1271                            .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
+    1272                            .dwattr $C$DW$33, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1273                            .dwattr $C$DW$33, DW_AT_decl_line(0xda)
+    1274                            .dwattr $C$DW$33, DW_AT_decl_column(0x0d)
+    1275                    
+    1276                    $C$DW$34        .dwtag  DW_TAG_member
+    1277                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$38)
+    1278                            .dwattr $C$DW$34, DW_AT_name("last")
+    1279                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("last")
+    1280                            .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x5]
+    1281                            .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
+    1282                            .dwattr $C$DW$34, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1283                            .dwattr $C$DW$34, DW_AT_decl_line(0xdb)
+    1284                            .dwattr $C$DW$34, DW_AT_decl_column(0x0d)
+    1285                    
+    1286                    $C$DW$35        .dwtag  DW_TAG_member
+    1287                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$67)
+    1288                            .dwattr $C$DW$35, DW_AT_name("offset")
+    1289                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("offset")
+    1290                            .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1291                            .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
+    1292                            .dwattr $C$DW$35, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1293                            .dwattr $C$DW$35, DW_AT_decl_line(0xdc)
+    1294                            .dwattr $C$DW$35, DW_AT_decl_column(0x15)
+    1295                    
+    1296                    $C$DW$36        .dwtag  DW_TAG_member
+    1297                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$40)
+    1298                            .dwattr $C$DW$36, DW_AT_name("data")
+    1299                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("data")
+    1300                            .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1301                            .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
+    1302                            .dwattr $C$DW$36, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1303                            .dwattr $C$DW$36, DW_AT_decl_line(0xdd)
+    1304                            .dwattr $C$DW$36, DW_AT_decl_column(0x14)
+    1305                    
+    1306                            .dwattr $C$DW$T$68, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1307                            .dwattr $C$DW$T$68, DW_AT_decl_line(0xd4)
+    1308                            .dwattr $C$DW$T$68, DW_AT_decl_column(0x10)
+    1309                            .dwendtag $C$DW$T$68
+    1310                    
+    1311                    $C$DW$T$72      .dwtag  DW_TAG_typedef
+    1312                            .dwattr $C$DW$T$72, DW_AT_name("Graphics_FontEx")
+    1313                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$68)
+    1314                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+    1315                            .dwattr $C$DW$T$72, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1316                            .dwattr $C$DW$T$72, DW_AT_decl_line(0xde)
+    1317                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x03)
+    1318                    
+    1319                    
+    1320                    $C$DW$T$69      .dwtag  DW_TAG_structure_type
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   25
+
+    1321                            .dwattr $C$DW$T$69, DW_AT_name("Graphics_Image")
+    1322                            .dwattr $C$DW$T$69, DW_AT_byte_size(0x10)
+    1323                    $C$DW$37        .dwtag  DW_TAG_member
+    1324                            .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$38)
+    1325                            .dwattr $C$DW$37, DW_AT_name("bPP")
+    1326                            .dwattr $C$DW$37, DW_AT_TI_symbol_name("bPP")
+    1327                            .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1328                            .dwattr $C$DW$37, DW_AT_accessibility(DW_ACCESS_public)
+    1329                            .dwattr $C$DW$37, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1330                            .dwattr $C$DW$37, DW_AT_decl_line(0x4f)
+    1331                            .dwattr $C$DW$37, DW_AT_decl_column(0x0d)
+    1332                    
+    1333                    $C$DW$38        .dwtag  DW_TAG_member
+    1334                            .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$29)
+    1335                            .dwattr $C$DW$38, DW_AT_name("xSize")
+    1336                            .dwattr $C$DW$38, DW_AT_TI_symbol_name("xSize")
+    1337                            .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1338                            .dwattr $C$DW$38, DW_AT_accessibility(DW_ACCESS_public)
+    1339                            .dwattr $C$DW$38, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1340                            .dwattr $C$DW$38, DW_AT_decl_line(0x50)
+    1341                            .dwattr $C$DW$38, DW_AT_decl_column(0x0e)
+    1342                    
+    1343                    $C$DW$39        .dwtag  DW_TAG_member
+    1344                            .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$29)
+    1345                            .dwattr $C$DW$39, DW_AT_name("ySize")
+    1346                            .dwattr $C$DW$39, DW_AT_TI_symbol_name("ySize")
+    1347                            .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1348                            .dwattr $C$DW$39, DW_AT_accessibility(DW_ACCESS_public)
+    1349                            .dwattr $C$DW$39, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1350                            .dwattr $C$DW$39, DW_AT_decl_line(0x51)
+    1351                            .dwattr $C$DW$39, DW_AT_decl_column(0x0e)
+    1352                    
+    1353                    $C$DW$40        .dwtag  DW_TAG_member
+    1354                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$29)
+    1355                            .dwattr $C$DW$40, DW_AT_name("numColors")
+    1356                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("numColors")
+    1357                            .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1358                            .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+    1359                            .dwattr $C$DW$40, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1360                            .dwattr $C$DW$40, DW_AT_decl_line(0x52)
+    1361                            .dwattr $C$DW$40, DW_AT_decl_column(0x0e)
+    1362                    
+    1363                    $C$DW$41        .dwtag  DW_TAG_member
+    1364                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$42)
+    1365                            .dwattr $C$DW$41, DW_AT_name("pPalette")
+    1366                            .dwattr $C$DW$41, DW_AT_TI_symbol_name("pPalette")
+    1367                            .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1368                            .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
+    1369                            .dwattr $C$DW$41, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1370                            .dwattr $C$DW$41, DW_AT_decl_line(0x53)
+    1371                            .dwattr $C$DW$41, DW_AT_decl_column(0x17)
+    1372                    
+    1373                    $C$DW$42        .dwtag  DW_TAG_member
+    1374                            .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$40)
+    1375                            .dwattr $C$DW$42, DW_AT_name("pPixel")
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   26
+
+    1376                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("pPixel")
+    1377                            .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1378                            .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
+    1379                            .dwattr $C$DW$42, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1380                            .dwattr $C$DW$42, DW_AT_decl_line(0x54)
+    1381                            .dwattr $C$DW$42, DW_AT_decl_column(0x15)
+    1382                    
+    1383                            .dwattr $C$DW$T$69, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1384                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x4d)
+    1385                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x10)
+    1386                            .dwendtag $C$DW$T$69
+    1387                    
+    1388                    $C$DW$T$73      .dwtag  DW_TAG_typedef
+    1389                            .dwattr $C$DW$T$73, DW_AT_name("Graphics_Image")
+    1390                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$69)
+    1391                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+    1392                            .dwattr $C$DW$T$73, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1393                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x55)
+    1394                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x03)
+    1395                    
+    1396                    $C$DW$T$74      .dwtag  DW_TAG_const_type
+    1397                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$73)
+    1398                    
+    1399                    
+    1400                    $C$DW$T$70      .dwtag  DW_TAG_structure_type
+    1401                            .dwattr $C$DW$T$70, DW_AT_name("Graphics_Rectangle")
+    1402                            .dwattr $C$DW$T$70, DW_AT_byte_size(0x08)
+    1403                    $C$DW$43        .dwtag  DW_TAG_member
+    1404                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$34)
+    1405                            .dwattr $C$DW$43, DW_AT_name("xMin")
+    1406                            .dwattr $C$DW$43, DW_AT_TI_symbol_name("xMin")
+    1407                            .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1408                            .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+    1409                            .dwattr $C$DW$43, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1410                            .dwattr $C$DW$43, DW_AT_decl_line(0x60)
+    1411                            .dwattr $C$DW$43, DW_AT_decl_column(0x0d)
+    1412                    
+    1413                    $C$DW$44        .dwtag  DW_TAG_member
+    1414                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$34)
+    1415                            .dwattr $C$DW$44, DW_AT_name("yMin")
+    1416                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("yMin")
+    1417                            .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1418                            .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+    1419                            .dwattr $C$DW$44, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1420                            .dwattr $C$DW$44, DW_AT_decl_line(0x61)
+    1421                            .dwattr $C$DW$44, DW_AT_decl_column(0x0d)
+    1422                    
+    1423                    $C$DW$45        .dwtag  DW_TAG_member
+    1424                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$34)
+    1425                            .dwattr $C$DW$45, DW_AT_name("xMax")
+    1426                            .dwattr $C$DW$45, DW_AT_TI_symbol_name("xMax")
+    1427                            .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1428                            .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
+    1429                            .dwattr $C$DW$45, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1430                            .dwattr $C$DW$45, DW_AT_decl_line(0x62)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   27
+
+    1431                            .dwattr $C$DW$45, DW_AT_decl_column(0x0d)
+    1432                    
+    1433                    $C$DW$46        .dwtag  DW_TAG_member
+    1434                            .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$34)
+    1435                            .dwattr $C$DW$46, DW_AT_name("yMax")
+    1436                            .dwattr $C$DW$46, DW_AT_TI_symbol_name("yMax")
+    1437                            .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1438                            .dwattr $C$DW$46, DW_AT_accessibility(DW_ACCESS_public)
+    1439                            .dwattr $C$DW$46, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
+    1440                            .dwattr $C$DW$46, DW_AT_decl_line(0x63)
+    1441                            .dwattr $C$DW$46, DW_AT_decl_column(0x0d)
+    1442                    
+    1443                            .dwattr $C$DW$T$70, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1444                            .dwattr $C$DW$T$70, DW_AT_decl_line(0x5e)
+    1445                            .dwattr $C$DW$T$70, DW_AT_decl_column(0x10)
+    1446                            .dwendtag $C$DW$T$70
+    1447                    
+    1448                    $C$DW$T$23      .dwtag  DW_TAG_typedef
+    1449                            .dwattr $C$DW$T$23, DW_AT_name("Graphics_Rectangle")
+    1450                            .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$70)
+    1451                            .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+    1452                            .dwattr $C$DW$T$23, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20
+    1453                            .dwattr $C$DW$T$23, DW_AT_decl_line(0x64)
+    1454                            .dwattr $C$DW$T$23, DW_AT_decl_column(0x03)
+    1455                    
+    1456                    $C$DW$T$49      .dwtag  DW_TAG_const_type
+    1457                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$23)
+    1458                    
+    1459                    $C$DW$T$50      .dwtag  DW_TAG_pointer_type
+    1460                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$49)
+    1461                            .dwattr $C$DW$T$50, DW_AT_address_class(0x20)
+    1462                    
+    1463                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1464                            .dwattr $C$DW$T$2, DW_AT_name("void")
+    1465                    
+    1466                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+    1467                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+    1468                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+    1469                    
+    1470                    
+    1471                    $C$DW$T$35      .dwtag  DW_TAG_subroutine_type
+    1472                            .dwattr $C$DW$T$35, DW_AT_language(DW_LANG_C)
+    1473                    $C$DW$47        .dwtag  DW_TAG_formal_parameter
+    1474                            .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$22)
+    1475                    
+    1476                    $C$DW$48        .dwtag  DW_TAG_formal_parameter
+    1477                            .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$34)
+    1478                    
+    1479                    $C$DW$49        .dwtag  DW_TAG_formal_parameter
+    1480                            .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$34)
+    1481                    
+    1482                    $C$DW$50        .dwtag  DW_TAG_formal_parameter
+    1483                            .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$29)
+    1484                    
+    1485                            .dwendtag $C$DW$T$35
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   28
+
+    1486                    
+    1487                    $C$DW$T$36      .dwtag  DW_TAG_pointer_type
+    1488                            .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+    1489                            .dwattr $C$DW$T$36, DW_AT_address_class(0x20)
+    1490                    
+    1491                    $C$DW$T$37      .dwtag  DW_TAG_const_type
+    1492                            .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$36)
+    1493                    
+    1494                    
+    1495                    $C$DW$T$43      .dwtag  DW_TAG_subroutine_type
+    1496                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+    1497                    $C$DW$51        .dwtag  DW_TAG_formal_parameter
+    1498                            .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$22)
+    1499                    
+    1500                    $C$DW$52        .dwtag  DW_TAG_formal_parameter
+    1501                            .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$34)
+    1502                    
+    1503                    $C$DW$53        .dwtag  DW_TAG_formal_parameter
+    1504                            .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$34)
+    1505                    
+    1506                    $C$DW$54        .dwtag  DW_TAG_formal_parameter
+    1507                            .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$34)
+    1508                    
+    1509                    $C$DW$55        .dwtag  DW_TAG_formal_parameter
+    1510                            .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$34)
+    1511                    
+    1512                    $C$DW$56        .dwtag  DW_TAG_formal_parameter
+    1513                            .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$34)
+    1514                    
+    1515                    $C$DW$57        .dwtag  DW_TAG_formal_parameter
+    1516                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$40)
+    1517                    
+    1518                    $C$DW$58        .dwtag  DW_TAG_formal_parameter
+    1519                            .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$42)
+    1520                    
+    1521                            .dwendtag $C$DW$T$43
+    1522                    
+    1523                    $C$DW$T$44      .dwtag  DW_TAG_pointer_type
+    1524                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+    1525                            .dwattr $C$DW$T$44, DW_AT_address_class(0x20)
+    1526                    
+    1527                    $C$DW$T$45      .dwtag  DW_TAG_const_type
+    1528                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$44)
+    1529                    
+    1530                    
+    1531                    $C$DW$T$46      .dwtag  DW_TAG_subroutine_type
+    1532                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+    1533                    $C$DW$59        .dwtag  DW_TAG_formal_parameter
+    1534                            .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$22)
+    1535                    
+    1536                    $C$DW$60        .dwtag  DW_TAG_formal_parameter
+    1537                            .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$34)
+    1538                    
+    1539                    $C$DW$61        .dwtag  DW_TAG_formal_parameter
+    1540                            .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$34)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   29
+
+    1541                    
+    1542                    $C$DW$62        .dwtag  DW_TAG_formal_parameter
+    1543                            .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$34)
+    1544                    
+    1545                    $C$DW$63        .dwtag  DW_TAG_formal_parameter
+    1546                            .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$29)
+    1547                    
+    1548                            .dwendtag $C$DW$T$46
+    1549                    
+    1550                    $C$DW$T$47      .dwtag  DW_TAG_pointer_type
+    1551                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$46)
+    1552                            .dwattr $C$DW$T$47, DW_AT_address_class(0x20)
+    1553                    
+    1554                    $C$DW$T$48      .dwtag  DW_TAG_const_type
+    1555                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$47)
+    1556                    
+    1557                    
+    1558                    $C$DW$T$51      .dwtag  DW_TAG_subroutine_type
+    1559                            .dwattr $C$DW$T$51, DW_AT_language(DW_LANG_C)
+    1560                    $C$DW$64        .dwtag  DW_TAG_formal_parameter
+    1561                            .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$22)
+    1562                    
+    1563                    $C$DW$65        .dwtag  DW_TAG_formal_parameter
+    1564                            .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$50)
+    1565                    
+    1566                    $C$DW$66        .dwtag  DW_TAG_formal_parameter
+    1567                            .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$29)
+    1568                    
+    1569                            .dwendtag $C$DW$T$51
+    1570                    
+    1571                    $C$DW$T$52      .dwtag  DW_TAG_pointer_type
+    1572                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$51)
+    1573                            .dwattr $C$DW$T$52, DW_AT_address_class(0x20)
+    1574                    
+    1575                    $C$DW$T$53      .dwtag  DW_TAG_const_type
+    1576                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$52)
+    1577                    
+    1578                    
+    1579                    $C$DW$T$57      .dwtag  DW_TAG_subroutine_type
+    1580                            .dwattr $C$DW$T$57, DW_AT_language(DW_LANG_C)
+    1581                    $C$DW$67        .dwtag  DW_TAG_formal_parameter
+    1582                            .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$22)
+    1583                    
+    1584                            .dwendtag $C$DW$T$57
+    1585                    
+    1586                    $C$DW$T$58      .dwtag  DW_TAG_pointer_type
+    1587                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$57)
+    1588                            .dwattr $C$DW$T$58, DW_AT_address_class(0x20)
+    1589                    
+    1590                    $C$DW$T$59      .dwtag  DW_TAG_const_type
+    1591                            .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$58)
+    1592                    
+    1593                    
+    1594                    $C$DW$T$60      .dwtag  DW_TAG_subroutine_type
+    1595                            .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   30
+
+    1596                    $C$DW$68        .dwtag  DW_TAG_formal_parameter
+    1597                            .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$22)
+    1598                    
+    1599                    $C$DW$69        .dwtag  DW_TAG_formal_parameter
+    1600                            .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$29)
+    1601                    
+    1602                            .dwendtag $C$DW$T$60
+    1603                    
+    1604                    $C$DW$T$61      .dwtag  DW_TAG_pointer_type
+    1605                            .dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+    1606                            .dwattr $C$DW$T$61, DW_AT_address_class(0x20)
+    1607                    
+    1608                    $C$DW$T$62      .dwtag  DW_TAG_const_type
+    1609                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$61)
+    1610                    
+    1611                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1612                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1613                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1614                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1615                    
+    1616                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1617                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1618                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1619                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1620                    
+    1621                    $C$DW$T$75      .dwtag  DW_TAG_typedef
+    1622                            .dwattr $C$DW$T$75, DW_AT_name("int8_t")
+    1623                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$5)
+    1624                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+    1625                            .dwattr $C$DW$T$75, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1626                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x2a)
+    1627                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x1d)
+    1628                    
+    1629                    $C$DW$T$76      .dwtag  DW_TAG_typedef
+    1630                            .dwattr $C$DW$T$76, DW_AT_name("int_least8_t")
+    1631                            .dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$75)
+    1632                            .dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
+    1633                            .dwattr $C$DW$T$76, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1634                            .dwattr $C$DW$T$76, DW_AT_decl_line(0x37)
+    1635                            .dwattr $C$DW$T$76, DW_AT_decl_column(0x17)
+    1636                    
+    1637                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1638                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1639                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1640                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1641                    
+    1642                    $C$DW$T$77      .dwtag  DW_TAG_const_type
+    1643                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$6)
+    1644                    
+    1645                    
+    1646                    $C$DW$T$78      .dwtag  DW_TAG_array_type
+    1647                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$77)
+    1648                            .dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
+    1649                            .dwattr $C$DW$T$78, DW_AT_byte_size(0x30c)
+    1650                    $C$DW$70        .dwtag  DW_TAG_subrange_type
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   31
+
+    1651                            .dwattr $C$DW$70, DW_AT_upper_bound(0x30b)
+    1652                    
+    1653                            .dwendtag $C$DW$T$78
+    1654                    
+    1655                    $C$DW$T$38      .dwtag  DW_TAG_typedef
+    1656                            .dwattr $C$DW$T$38, DW_AT_name("uint8_t")
+    1657                            .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$6)
+    1658                            .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+    1659                            .dwattr $C$DW$T$38, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1660                            .dwattr $C$DW$T$38, DW_AT_decl_line(0x2b)
+    1661                            .dwattr $C$DW$T$38, DW_AT_decl_column(0x1c)
+    1662                    
+    1663                    $C$DW$T$39      .dwtag  DW_TAG_const_type
+    1664                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
+    1665                    
+    1666                    $C$DW$T$40      .dwtag  DW_TAG_pointer_type
+    1667                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+    1668                            .dwattr $C$DW$T$40, DW_AT_address_class(0x20)
+    1669                    
+    1670                    $C$DW$T$80      .dwtag  DW_TAG_typedef
+    1671                            .dwattr $C$DW$T$80, DW_AT_name("uint_least8_t")
+    1672                            .dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$38)
+    1673                            .dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
+    1674                            .dwattr $C$DW$T$80, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1675                            .dwattr $C$DW$T$80, DW_AT_decl_line(0x38)
+    1676                            .dwattr $C$DW$T$80, DW_AT_decl_column(0x16)
+    1677                    
+    1678                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1679                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1680                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1681                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1682                    
+    1683                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1684                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1685                            .dwattr $C$DW$T$8, DW_AT_name("short")
+    1686                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+    1687                    
+    1688                    $C$DW$T$34      .dwtag  DW_TAG_typedef
+    1689                            .dwattr $C$DW$T$34, DW_AT_name("int16_t")
+    1690                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$8)
+    1691                            .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+    1692                            .dwattr $C$DW$T$34, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1693                            .dwattr $C$DW$T$34, DW_AT_decl_line(0x2c)
+    1694                            .dwattr $C$DW$T$34, DW_AT_decl_column(0x1d)
+    1695                    
+    1696                    $C$DW$T$81      .dwtag  DW_TAG_typedef
+    1697                            .dwattr $C$DW$T$81, DW_AT_name("int_least16_t")
+    1698                            .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$34)
+    1699                            .dwattr $C$DW$T$81, DW_AT_language(DW_LANG_C)
+    1700                            .dwattr $C$DW$T$81, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1701                            .dwattr $C$DW$T$81, DW_AT_decl_line(0x3a)
+    1702                            .dwattr $C$DW$T$81, DW_AT_decl_column(0x17)
+    1703                    
+    1704                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1705                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   32
+
+    1706                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1707                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+    1708                    
+    1709                    $C$DW$T$29      .dwtag  DW_TAG_typedef
+    1710                            .dwattr $C$DW$T$29, DW_AT_name("uint16_t")
+    1711                            .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$9)
+    1712                            .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+    1713                            .dwattr $C$DW$T$29, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1714                            .dwattr $C$DW$T$29, DW_AT_decl_line(0x2d)
+    1715                            .dwattr $C$DW$T$29, DW_AT_decl_column(0x1c)
+    1716                    
+    1717                    
+    1718                    $C$DW$T$64      .dwtag  DW_TAG_array_type
+    1719                            .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$29)
+    1720                            .dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
+    1721                            .dwattr $C$DW$T$64, DW_AT_byte_size(0xc0)
+    1722                    $C$DW$71        .dwtag  DW_TAG_subrange_type
+    1723                            .dwattr $C$DW$71, DW_AT_upper_bound(0x5f)
+    1724                    
+    1725                            .dwendtag $C$DW$T$64
+    1726                    
+    1727                    $C$DW$T$66      .dwtag  DW_TAG_const_type
+    1728                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$29)
+    1729                    
+    1730                    $C$DW$T$67      .dwtag  DW_TAG_pointer_type
+    1731                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$66)
+    1732                            .dwattr $C$DW$T$67, DW_AT_address_class(0x20)
+    1733                    
+    1734                    $C$DW$T$82      .dwtag  DW_TAG_typedef
+    1735                            .dwattr $C$DW$T$82, DW_AT_name("uint_least16_t")
+    1736                            .dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$29)
+    1737                            .dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
+    1738                            .dwattr $C$DW$T$82, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1739                            .dwattr $C$DW$T$82, DW_AT_decl_line(0x3b)
+    1740                            .dwattr $C$DW$T$82, DW_AT_decl_column(0x16)
+    1741                    
+    1742                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1743                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1744                            .dwattr $C$DW$T$10, DW_AT_name("int")
+    1745                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+    1746                    
+    1747                    $C$DW$T$19      .dwtag  DW_TAG_typedef
+    1748                            .dwattr $C$DW$T$19, DW_AT_name("int32_t")
+    1749                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$10)
+    1750                            .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    1751                            .dwattr $C$DW$T$19, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1752                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x2e)
+    1753                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x1d)
+    1754                    
+    1755                    $C$DW$T$83      .dwtag  DW_TAG_typedef
+    1756                            .dwattr $C$DW$T$83, DW_AT_name("int_fast16_t")
+    1757                            .dwattr $C$DW$T$83, DW_AT_type(*$C$DW$T$19)
+    1758                            .dwattr $C$DW$T$83, DW_AT_language(DW_LANG_C)
+    1759                            .dwattr $C$DW$T$83, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1760                            .dwattr $C$DW$T$83, DW_AT_decl_line(0x47)
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   33
+
+    1761                            .dwattr $C$DW$T$83, DW_AT_decl_column(0x17)
+    1762                    
+    1763                    $C$DW$T$84      .dwtag  DW_TAG_typedef
+    1764                            .dwattr $C$DW$T$84, DW_AT_name("int_fast32_t")
+    1765                            .dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$19)
+    1766                            .dwattr $C$DW$T$84, DW_AT_language(DW_LANG_C)
+    1767                            .dwattr $C$DW$T$84, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1768                            .dwattr $C$DW$T$84, DW_AT_decl_line(0x4a)
+    1769                            .dwattr $C$DW$T$84, DW_AT_decl_column(0x17)
+    1770                    
+    1771                    $C$DW$T$85      .dwtag  DW_TAG_typedef
+    1772                            .dwattr $C$DW$T$85, DW_AT_name("int_fast8_t")
+    1773                            .dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$19)
+    1774                            .dwattr $C$DW$T$85, DW_AT_language(DW_LANG_C)
+    1775                            .dwattr $C$DW$T$85, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1776                            .dwattr $C$DW$T$85, DW_AT_decl_line(0x45)
+    1777                            .dwattr $C$DW$T$85, DW_AT_decl_column(0x17)
+    1778                    
+    1779                    $C$DW$T$86      .dwtag  DW_TAG_typedef
+    1780                            .dwattr $C$DW$T$86, DW_AT_name("int_least32_t")
+    1781                            .dwattr $C$DW$T$86, DW_AT_type(*$C$DW$T$19)
+    1782                            .dwattr $C$DW$T$86, DW_AT_language(DW_LANG_C)
+    1783                            .dwattr $C$DW$T$86, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1784                            .dwattr $C$DW$T$86, DW_AT_decl_line(0x3c)
+    1785                            .dwattr $C$DW$T$86, DW_AT_decl_column(0x17)
+    1786                    
+    1787                    $C$DW$T$87      .dwtag  DW_TAG_typedef
+    1788                            .dwattr $C$DW$T$87, DW_AT_name("intptr_t")
+    1789                            .dwattr $C$DW$T$87, DW_AT_type(*$C$DW$T$10)
+    1790                            .dwattr $C$DW$T$87, DW_AT_language(DW_LANG_C)
+    1791                            .dwattr $C$DW$T$87, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1792                            .dwattr $C$DW$T$87, DW_AT_decl_line(0x52)
+    1793                            .dwattr $C$DW$T$87, DW_AT_decl_column(0x1a)
+    1794                    
+    1795                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1796                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1797                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1798                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+    1799                    
+    1800                    $C$DW$T$24      .dwtag  DW_TAG_typedef
+    1801                            .dwattr $C$DW$T$24, DW_AT_name("uint32_t")
+    1802                            .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$11)
+    1803                            .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+    1804                            .dwattr $C$DW$T$24, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1805                            .dwattr $C$DW$T$24, DW_AT_decl_line(0x2f)
+    1806                            .dwattr $C$DW$T$24, DW_AT_decl_column(0x1c)
+    1807                    
+    1808                    
+    1809                    $C$DW$T$54      .dwtag  DW_TAG_subroutine_type
+    1810                            .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$24)
+    1811                            .dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+    1812                    $C$DW$72        .dwtag  DW_TAG_formal_parameter
+    1813                            .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$22)
+    1814                    
+    1815                    $C$DW$73        .dwtag  DW_TAG_formal_parameter
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   34
+
+    1816                            .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$24)
+    1817                    
+    1818                            .dwendtag $C$DW$T$54
+    1819                    
+    1820                    $C$DW$T$55      .dwtag  DW_TAG_pointer_type
+    1821                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$54)
+    1822                            .dwattr $C$DW$T$55, DW_AT_address_class(0x20)
+    1823                    
+    1824                    $C$DW$T$56      .dwtag  DW_TAG_const_type
+    1825                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+    1826                    
+    1827                    $C$DW$T$41      .dwtag  DW_TAG_const_type
+    1828                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$24)
+    1829                    
+    1830                    $C$DW$T$42      .dwtag  DW_TAG_pointer_type
+    1831                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$41)
+    1832                            .dwattr $C$DW$T$42, DW_AT_address_class(0x20)
+    1833                    
+    1834                    $C$DW$T$88      .dwtag  DW_TAG_typedef
+    1835                            .dwattr $C$DW$T$88, DW_AT_name("uint_fast16_t")
+    1836                            .dwattr $C$DW$T$88, DW_AT_type(*$C$DW$T$24)
+    1837                            .dwattr $C$DW$T$88, DW_AT_language(DW_LANG_C)
+    1838                            .dwattr $C$DW$T$88, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1839                            .dwattr $C$DW$T$88, DW_AT_decl_line(0x48)
+    1840                            .dwattr $C$DW$T$88, DW_AT_decl_column(0x16)
+    1841                    
+    1842                    $C$DW$T$89      .dwtag  DW_TAG_typedef
+    1843                            .dwattr $C$DW$T$89, DW_AT_name("uint_fast32_t")
+    1844                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$24)
+    1845                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+    1846                            .dwattr $C$DW$T$89, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1847                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x4b)
+    1848                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x16)
+    1849                    
+    1850                    $C$DW$T$90      .dwtag  DW_TAG_typedef
+    1851                            .dwattr $C$DW$T$90, DW_AT_name("uint_fast8_t")
+    1852                            .dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$24)
+    1853                            .dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
+    1854                            .dwattr $C$DW$T$90, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1855                            .dwattr $C$DW$T$90, DW_AT_decl_line(0x46)
+    1856                            .dwattr $C$DW$T$90, DW_AT_decl_column(0x16)
+    1857                    
+    1858                    $C$DW$T$91      .dwtag  DW_TAG_typedef
+    1859                            .dwattr $C$DW$T$91, DW_AT_name("uint_least32_t")
+    1860                            .dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$24)
+    1861                            .dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
+    1862                            .dwattr $C$DW$T$91, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1863                            .dwattr $C$DW$T$91, DW_AT_decl_line(0x3d)
+    1864                            .dwattr $C$DW$T$91, DW_AT_decl_column(0x16)
+    1865                    
+    1866                    $C$DW$T$92      .dwtag  DW_TAG_typedef
+    1867                            .dwattr $C$DW$T$92, DW_AT_name("uintptr_t")
+    1868                            .dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$11)
+    1869                            .dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
+    1870                            .dwattr $C$DW$T$92, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   35
+
+    1871                            .dwattr $C$DW$T$92, DW_AT_decl_line(0x53)
+    1872                            .dwattr $C$DW$T$92, DW_AT_decl_column(0x1a)
+    1873                    
+    1874                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1875                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1876                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1877                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1878                    
+    1879                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1880                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1881                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1882                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1883                    
+    1884                    $C$DW$T$93      .dwtag  DW_TAG_const_type
+    1885                            .dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$13)
+    1886                    
+    1887                    
+    1888                    $C$DW$T$94      .dwtag  DW_TAG_array_type
+    1889                            .dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$93)
+    1890                            .dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
+    1891                            .dwattr $C$DW$T$94, DW_AT_byte_size(0x40)
+    1892                    $C$DW$74        .dwtag  DW_TAG_subrange_type
+    1893                            .dwattr $C$DW$74, DW_AT_upper_bound(0x0f)
+    1894                    
+    1895                            .dwendtag $C$DW$T$94
+    1896                    
+    1897                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1898                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1899                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1900                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1901                    
+    1902                    $C$DW$T$97      .dwtag  DW_TAG_typedef
+    1903                            .dwattr $C$DW$T$97, DW_AT_name("int64_t")
+    1904                            .dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$14)
+    1905                            .dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
+    1906                            .dwattr $C$DW$T$97, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1907                            .dwattr $C$DW$T$97, DW_AT_decl_line(0x32)
+    1908                            .dwattr $C$DW$T$97, DW_AT_decl_column(0x21)
+    1909                    
+    1910                    $C$DW$T$98      .dwtag  DW_TAG_typedef
+    1911                            .dwattr $C$DW$T$98, DW_AT_name("int_fast64_t")
+    1912                            .dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$97)
+    1913                            .dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
+    1914                            .dwattr $C$DW$T$98, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1915                            .dwattr $C$DW$T$98, DW_AT_decl_line(0x4e)
+    1916                            .dwattr $C$DW$T$98, DW_AT_decl_column(0x17)
+    1917                    
+    1918                    $C$DW$T$99      .dwtag  DW_TAG_typedef
+    1919                            .dwattr $C$DW$T$99, DW_AT_name("int_least64_t")
+    1920                            .dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$97)
+    1921                            .dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
+    1922                            .dwattr $C$DW$T$99, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.L
+    1923                            .dwattr $C$DW$T$99, DW_AT_decl_line(0x40)
+    1924                            .dwattr $C$DW$T$99, DW_AT_decl_column(0x17)
+    1925                    
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   36
+
+    1926                    $C$DW$T$100     .dwtag  DW_TAG_typedef
+    1927                            .dwattr $C$DW$T$100, DW_AT_name("intmax_t")
+    1928                            .dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$14)
+    1929                            .dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
+    1930                            .dwattr $C$DW$T$100, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
+    1931                            .dwattr $C$DW$T$100, DW_AT_decl_line(0x56)
+    1932                            .dwattr $C$DW$T$100, DW_AT_decl_column(0x20)
+    1933                    
+    1934                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1935                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1936                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1937                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1938                    
+    1939                    $C$DW$T$101     .dwtag  DW_TAG_typedef
+    1940                            .dwattr $C$DW$T$101, DW_AT_name("uint64_t")
+    1941                            .dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$15)
+    1942                            .dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
+    1943                            .dwattr $C$DW$T$101, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
+    1944                            .dwattr $C$DW$T$101, DW_AT_decl_line(0x33)
+    1945                            .dwattr $C$DW$T$101, DW_AT_decl_column(0x20)
+    1946                    
+    1947                    $C$DW$T$102     .dwtag  DW_TAG_typedef
+    1948                            .dwattr $C$DW$T$102, DW_AT_name("uint_fast64_t")
+    1949                            .dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$101)
+    1950                            .dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
+    1951                            .dwattr $C$DW$T$102, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
+    1952                            .dwattr $C$DW$T$102, DW_AT_decl_line(0x4f)
+    1953                            .dwattr $C$DW$T$102, DW_AT_decl_column(0x16)
+    1954                    
+    1955                    $C$DW$T$103     .dwtag  DW_TAG_typedef
+    1956                            .dwattr $C$DW$T$103, DW_AT_name("uint_least64_t")
+    1957                            .dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$101)
+    1958                            .dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
+    1959                            .dwattr $C$DW$T$103, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
+    1960                            .dwattr $C$DW$T$103, DW_AT_decl_line(0x41)
+    1961                            .dwattr $C$DW$T$103, DW_AT_decl_column(0x16)
+    1962                    
+    1963                    $C$DW$T$104     .dwtag  DW_TAG_typedef
+    1964                            .dwattr $C$DW$T$104, DW_AT_name("uintmax_t")
+    1965                            .dwattr $C$DW$T$104, DW_AT_type(*$C$DW$T$15)
+    1966                            .dwattr $C$DW$T$104, DW_AT_language(DW_LANG_C)
+    1967                            .dwattr $C$DW$T$104, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
+    1968                            .dwattr $C$DW$T$104, DW_AT_decl_line(0x57)
+    1969                            .dwattr $C$DW$T$104, DW_AT_decl_column(0x20)
+    1970                    
+    1971                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1972                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1973                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1974                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1975                    
+    1976                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1977                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1978                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1979                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1980                    
+TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:45 2017
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+play3.asm                                                            PAGE   37
+
+    1981                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1982                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1983                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1984                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1985                    
+    1986                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1987                            .dwendtag $C$DW$CU
+    1988                    
+
+No Assembly Errors, No Assembly Warnings
