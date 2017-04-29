@@ -37,73 +37,61 @@ volatile int health=100;
 
 void WDT_A_IRQHandler(void)
 {
-    /*
-    if (state==0)
-     {
-         Display_Pet(state, &g_sContext, 45, 45);
-         //Graphics_drawImage(&g_sContext, &color4BPP_UNCOMP, 45, 45);
-     }
-     else if (state==1)
-     {
-         Display_Pet(state, &g_sContext, 45, 45);
-         //Graphics_drawImage(&g_sContext, &color24BPP_UNCOMP, 45, 45);
-     }
-     else if (state==2) /
-     {
-         Display_Pet(state, &g_sContext, 45, 45);
-         //Graphics_drawImage(&g_sContext, &color24BPP_UNCOMP, 45, 45);
-     }*/
+
 
     if (BUTTON_PORT1->IFG & BUTTON_BIT1)//switch
-       { // check that it is the button interrupt flag
-           BUTTON_PORT1->IFG &= ~BUTTON_BIT1; // clear the flag to allow for another interrupt later.
+                   { // check that it is the button interrupt flag
+                       BUTTON_PORT1->IFG &= ~BUTTON_BIT1; // clear the flag to allow for another interrupt later.
 
-           switch (state) //5 seconddd (while loop)
-                      {
-                              case 0:
-                              {
-                                  //display eat
-                                  Graphics_drawImage(&g_sContext, &eat14BPP_UNCOMP, 45, 45);
-                                  break;
-                              }
-                              case 1:
-                              {
-                                 //display play
-                                  Graphics_drawImage(&g_sContext, &play14BPP_UNCOMP, 45, 45);
-                                  break;
-                              }
-                              case 2:
-                              {
-                                  //display walk
-                                  Graphics_drawImage(&g_sContext, &walk14BPP_UNCOMP, 45, 45);
-                                  break;
-                              }
-                      }
-       }
-    else if( health > 80)
-    {
-        //display happy
-        //Display_happy();
-        Graphics_drawImage(&g_sContext, &happy14BPP_UNCOMP, 45, 45);
-    }
-    else if( (health > 40) && (health < 80))
-    {
-        //display normal
-        Graphics_drawImage(&g_sContext, &normal14BPP_UNCOMP, 45, 45);
-    }
-    else
-    {
-        //display unhappy
-        Graphics_drawImage(&g_sContext, &unhappy14BPP_UNCOMP, 45, 45);
-    }
+                       switch (state) //5 seconddd (while loop)
+                                  {
+                                          case 1:
+                                          {
+                                              //display eat
+                                              Graphics_drawImage(&g_sContext, &eat14BPP_UNCOMP, 45, 45);
+                                              health = health + 15;
+                                              break;
+                                          }
+                                          case 2:
+                                          {
+                                             //display play
+                                              Graphics_drawImage(&g_sContext, &play14BPP_UNCOMP, 45, 45);
+                                              health = health - 5;
+                                              break;
 
+                                          }
+                                          case 0:
+                                          {
+                                              //display walk
+                                              Graphics_drawImage(&g_sContext, &walk14BPP_UNCOMP, 45, 45);
+                                              break;
 
+                                          }
+                                  }
+                   }
+                else if( health > 80)
+                {
+                    //display happy
+                    //Display_happy();
+                    Graphics_drawImage(&g_sContext, &happy14BPP_UNCOMP, 45, 45);
+                }
+                else if( (health > 40) && (health < 80))
+                {
+                    //display normal
+                    Graphics_drawImage(&g_sContext, &normal14BPP_UNCOMP, 45, 45);
+                }
+                else
+                {
+                    //display unhappy
+                    Graphics_drawImage(&g_sContext, &unhappy14BPP_UNCOMP, 45, 45);
+                }
 }
 
 void init_WDT(){
-    MAP_WDT_A_initIntervalTimer(WDT_A_CLOCKSOURCE_SMCLK,WDT_A_CLOCKITERATIONS_512K);
+    MAP_WDT_A_initIntervalTimer(WDT_A_CLOCKSOURCE_SMCLK,WDT_A_CLOCKITERATIONS_8192K);
     MAP_WDT_A_startTimer(); // start the timer
 }
+
 
 void init_display(){
     /* Initializes display */
@@ -172,13 +160,11 @@ void init_button() //intializing the values of buttons
 
 void PORT5_IRQHandler() //changes what happens to button on port 5
 {
-    if (BUTTON_PORT1->IFG & BUTTON_BIT1)//switch
+    /*if (BUTTON_PORT1->IFG & BUTTON_BIT1)//switch
     { // check that it is the button interrupt flag
         BUTTON_PORT1->IFG &= ~BUTTON_BIT1; // clear the flag to allow for another interrupt later.
-
-
         //TIMER_A0->CCTL[0]^=TIMER_A_CCTLN_OUTMOD_4; //pause the array
-    }
+    }*/
 }
 void PORT3_IRQHandler() //changes what happens to button on port 3
 {
@@ -241,9 +227,10 @@ void main(){
 
     init_WDT();
     MAP_Interrupt_enableInterrupt(INT_WDT_A);
+    CS_setDCOCenteredFrequency(CS_DCO_FREQUENCY_24);
     //Graphics_drawImage(&g_sContext, &color4BPP_UNCOMP, 45, 45);
 
-    volatile int health = 100;
+
     while(1)
     {
 
@@ -262,8 +249,11 @@ void main(){
         //  Char string to store score info
         sprintf(string_score, "Health: %03d", health);
          Graphics_drawString(&g_sContext,(int8_t *)string_score,AUTO_STRING_LENGTH,20,116,OPAQUE_TEXT);
-         health = health - 1;
 
+         if(health != 0)
+         {
+         health--;
+         }
     }
 
 }
