@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* TI ARM C/C++ Codegen                                      Unix v16.9.0.LTS *
-;* Date/Time created: Sat Apr 29 07:00:43 2017                                *
+;* Date/Time created: Sun Apr 30 23:23:08 2017                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --embedded_constants=on --endian=little --float_support=FPv4SPD16 --hll_source=on --object_format=elf --silicon_version=7M4 --symdebug:dwarf --symdebug:dwarf_version=3 --unaligned_access=on 
 	.thumb
@@ -255,7 +255,7 @@ $C$DW$24	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$24, DW_AT_decl_line(0x24c)
 	.dwattr $C$DW$24, DW_AT_decl_column(0x18)
 
-;	/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armopt /var/tmp/11438QNHgvO /var/tmp/11438ym89fL 
+;	/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armopt /var/tmp/09576ej2Fe3 /var/tmp/09576YkRt7F 
 	.sect	".text:Crystalfontz128x128_SetOrientation"
 	.clink
 	.thumbfunc Crystalfontz128x128_SetOrientation

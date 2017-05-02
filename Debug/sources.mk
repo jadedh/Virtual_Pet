@@ -115,5 +115,6 @@ SUBDIRS := \
 LcdDriver \
 ccs \
 fonts \
-image \
+pet_doggy \
+pet_mametchi \
 

@@ -1,11 +1,11 @@
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    1
 
        1                    ;******************************************************************************
        2                    ;* TI ARM C/C++ Codegen                                      Unix v16.9.0.LTS *
-       3                    ;* Date/Time created: Sat Apr 29 07:00:42 2017                                *
+       3                    ;* Date/Time created: Sun Apr 30 23:23:07 2017                                *
        4                    ;******************************************************************************
        5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --embed
        6 00000000                   .thumb
@@ -32,7 +32,7 @@ system_msp432p401r.asm                                               PAGE    1
       27                            .dwattr $C$DW$1, DW_AT_decl_line(0x5a)
       28                            .dwattr $C$DW$1, DW_AT_decl_column(0x0a)
       29                    
-      30                    ;       /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armopt /var/tmp/11436gUoTzJ /v
+      30                    ;       /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armopt /var/tmp/09575i0edYN /v
       31 00000000                   .sect   ".text:SystemInit"
       32                            .clink
       33                            .thumbfunc SystemInit
@@ -58,7 +58,7 @@ system_msp432p401r.asm                                               PAGE    1
       53                    ;----------------------------------------------------------------------
       54                    ; 266 | void SystemInit(void)                                                  
       55                    ; 268 | // Enable FPU if used                                                  
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    2
@@ -118,7 +118,7 @@ system_msp432p401r.asm                                               PAGE    2
      108 00000016 6010              STR       A1, [A3, #0]          ; [DPU_3_PIPE] |270|  ; [ORIG 16-BIT INS]
      109                            .dwpsn  file "../system_msp432p401r.c",line 278,column 5,is_stmt,isa 1
      110                    ;----------------------------------------------------------------------
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    3
@@ -178,7 +178,7 @@ system_msp432p401r.asm                                               PAGE    3
      163                    ;----------------------------------------------------------------------
      164 00000026 3080F44F          MOV       A1, #65536            ; [DPU_3_PIPE] |317|  ; [KEEP 32-BIT INS]
      165 0000002a 6048              STR       A1, [A2, #4]          ; [DPU_3_PIPE] |317|  ; [ORIG 16-BIT INS]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    4
@@ -238,7 +238,7 @@ system_msp432p401r.asm                                               PAGE    4
      218                    ; 347 | FLCTL->BANK1_RDCTL = FLCTL->BANK1_RDCTL & ~(FLCTL_BANK1_RDCTL_BUFD | FL
      219                    ;     | CTL_BANK1_RDCTL_BUFI);                                                 
      220                    ; 349 | #elif (__SYSTEM_CLOCK == 24000000)                     // 24 MHz       
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    5
@@ -298,7 +298,7 @@ system_msp432p401r.asm                                               PAGE    5
      273                    ;     | LK as DCO source                                                       
      274                    ; 396 | CS->KEY = 0;                                                           
      275                    ; 398 | // Set Flash Bank read buffering                                       
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    6
@@ -358,7 +358,7 @@ system_msp432p401r.asm                                               PAGE    6
      328                    ;----------------------------------------------------------------------
      329                    
      330                    ;*****************************************************************************
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    7
@@ -418,7 +418,7 @@ system_msp432p401r.asm                                               PAGE    7
      383                    $C$DW$10        .dwtag  DW_TAG_variable
      384                            .dwattr $C$DW$10, DW_AT_name("centeredFreq")
      385                            .dwattr $C$DW$10, DW_AT_TI_symbol_name("centeredFreq")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    8
@@ -478,7 +478,7 @@ system_msp432p401r.asm                                               PAGE    8
      438                    ; 154 | else                                                                   
      439                    ; 156 |     SystemCoreClock = (32000 / dividerValue);                          
      440                    ; 158 | break;                                                                 
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE    9
@@ -538,7 +538,7 @@ system_msp432p401r.asm                                               PAGE    9
      493                    ; 191 | if(dcoTune & 0x1000)                                                   
      494                    ; 193 |     dcoTune = dcoTune | 0xF000;                                        
      495                    ; 196 | if (BITBAND_PERI(CS->CTL0, CS_CTL0_DCORES_OFS))                        
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   10
@@ -598,7 +598,7 @@ system_msp432p401r.asm                                               PAGE   10
      548                    ;----------------------------------------------------------------------
      549 00000048 6D28              LDR       A1, [V2, #80]         ; [DPU_3_PIPE] |222|  ; [ORIG 16-BIT INS]
      550 0000004a 0002F040          ORR       A1, A1, #2            ; [DPU_3_PIPE] |222|  ; [KEEP 32-BIT INS]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   11
@@ -658,7 +658,7 @@ system_msp432p401r.asm                                               PAGE   11
      603 00000070 229FF36F          BFC       A3, #10, #22          ; [DPU_3_PIPE] |160|  ; [KEEP 32-BIT INS]
      604 00000074 B217              SXTH      V4, A3                ; [DPU_3_PIPE] |160|  ; [ORIG 16-BIT INS]
      605                            .dwpsn  file "../system_msp432p401r.c",line 162,column 9,is_stmt,isa 1
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   12
@@ -718,7 +718,7 @@ system_msp432p401r.asm                                               PAGE   12
      658                            .dwpsn  file "../system_msp432p401r.c",line 165,column 13,is_stmt,isa 1
      659 000000ac 460C              MOV       V1, A2                ; [DPU_3_PIPE] |165|  ; [ORIG 16-BIT INS]
      660 000000ae 0964              LSRS      V1, V1, #5            ; [DPU_3_PIPE] |165|  ; [ORIG 16-BIT INS]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   13
@@ -778,7 +778,7 @@ system_msp432p401r.asm                                               PAGE   13
      713                    ;* --------------------------------------------------------------------------*
      714 0000011e           ||$C$L10||:    
      715                            .dwpsn  file "../system_msp432p401r.c",line 150,column 9,is_stmt,isa 1
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   14
@@ -838,7 +838,7 @@ system_msp432p401r.asm                                               PAGE   14
      768 00000156           ||$C$L15||:    
      769                            .dwpsn  file "../system_msp432p401r.c",line 147,column 9,is_stmt,isa 1
      770 00000156 7010F242          MOV       A1, #10000            ; [DPU_3_PIPE] |147|  ; [KEEP 32-BIT INS]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   15
@@ -898,7 +898,7 @@ system_msp432p401r.asm                                               PAGE   15
      819                            .align  4
      820 00000178 422080D8  ||$C$CON14||:   .bits   1109426392,32
      821                            .align  4
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   16
@@ -958,7 +958,7 @@ system_msp432p401r.asm                                               PAGE   16
      874                    
      875                    $C$DW$16        .dwtag  DW_TAG_member
      876                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   17
@@ -1018,7 +1018,7 @@ system_msp432p401r.asm                                               PAGE   17
      929                            .dwattr $C$DW$21, DW_AT_data_member_location[DW_OP_plus_uconst 0x38]
      930                            .dwattr $C$DW$21, DW_AT_accessibility(DW_ACCESS_public)
      931                            .dwattr $C$DW$21, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_0
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   18
@@ -1078,7 +1078,7 @@ system_msp432p401r.asm                                               PAGE   18
      984                    
      985                    $C$DW$27        .dwtag  DW_TAG_member
      986                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$19)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   19
@@ -1138,7 +1138,7 @@ system_msp432p401r.asm                                               PAGE   19
     1039                    
     1040                    $C$DW$T$171     .dwtag  DW_TAG_typedef
     1041                            .dwattr $C$DW$T$171, DW_AT_name("CS_Type")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   20
@@ -1198,7 +1198,7 @@ system_msp432p401r.asm                                               PAGE   20
     1094                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("HWREV")
     1095                            .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
     1096                            .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   21
@@ -1258,7 +1258,7 @@ system_msp432p401r.asm                                               PAGE   21
     1149                            .dwattr $C$DW$41, DW_AT_decl_column(0x11)
     1150                    
     1151                    $C$DW$42        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   22
@@ -1318,7 +1318,7 @@ system_msp432p401r.asm                                               PAGE   22
     1204                            .dwattr $C$DW$47, DW_AT_TI_symbol_name("RESERVED2")
     1205                            .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x3c]
     1206                            .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   23
@@ -1378,7 +1378,7 @@ system_msp432p401r.asm                                               PAGE   23
     1259                            .dwattr $C$DW$52, DW_AT_decl_column(0x11)
     1260                    
     1261                    $C$DW$53        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   24
@@ -1438,7 +1438,7 @@ system_msp432p401r.asm                                               PAGE   24
     1314                            .dwattr $C$DW$58, DW_AT_TI_symbol_name("DCOIR_CONSTK_RSEL5")
     1315                            .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x68]
     1316                            .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   25
@@ -1498,7 +1498,7 @@ system_msp432p401r.asm                                               PAGE   25
     1369                            .dwattr $C$DW$63, DW_AT_decl_column(0x11)
     1370                    
     1371                    $C$DW$64        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   26
@@ -1558,7 +1558,7 @@ system_msp432p401r.asm                                               PAGE   26
     1424                            .dwattr $C$DW$69, DW_AT_TI_symbol_name("ADC_GAIN_FACTOR")
     1425                            .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x94]
     1426                            .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   27
@@ -1618,7 +1618,7 @@ system_msp432p401r.asm                                               PAGE   27
     1479                            .dwattr $C$DW$74, DW_AT_decl_column(0x11)
     1480                    
     1481                    $C$DW$75        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   28
@@ -1678,7 +1678,7 @@ system_msp432p401r.asm                                               PAGE   28
     1534                            .dwattr $C$DW$80, DW_AT_TI_symbol_name("RESERVED20")
     1535                            .dwattr $C$DW$80, DW_AT_data_member_location[DW_OP_plus_uconst 0xc0]
     1536                            .dwattr $C$DW$80, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   29
@@ -1738,7 +1738,7 @@ system_msp432p401r.asm                                               PAGE   29
     1589                            .dwattr $C$DW$85, DW_AT_decl_column(0x11)
     1590                    
     1591                    $C$DW$86        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   30
@@ -1798,7 +1798,7 @@ system_msp432p401r.asm                                               PAGE   30
     1644                            .dwattr $C$DW$91, DW_AT_TI_symbol_name("ADC14_REF2P5V_TS30C")
     1645                            .dwattr $C$DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0xec]
     1646                            .dwattr $C$DW$91, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   31
@@ -1858,7 +1858,7 @@ system_msp432p401r.asm                                               PAGE   31
     1699                            .dwattr $C$DW$96, DW_AT_decl_column(0x11)
     1700                    
     1701                    $C$DW$97        .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   32
@@ -1918,7 +1918,7 @@ system_msp432p401r.asm                                               PAGE   32
     1754                            .dwattr $C$DW$102, DW_AT_TI_symbol_name("RANDOM_NUM_TAG")
     1755                            .dwattr $C$DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0x118]
     1756                            .dwattr $C$DW$102, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   33
@@ -1978,7 +1978,7 @@ system_msp432p401r.asm                                               PAGE   33
     1809                            .dwattr $C$DW$107, DW_AT_decl_column(0x11)
     1810                    
     1811                    $C$DW$108       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   34
@@ -2038,7 +2038,7 @@ system_msp432p401r.asm                                               PAGE   34
     1864                            .dwattr $C$DW$113, DW_AT_TI_symbol_name("BSL_PORTIF_CFG_I2C")
     1865                            .dwattr $C$DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0x144]
     1866                            .dwattr $C$DW$113, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   35
@@ -2098,7 +2098,7 @@ system_msp432p401r.asm                                               PAGE   35
     1919                            .dwattr $C$DW$117, DW_AT_name("VTOR")
     1920                            .dwattr $C$DW$117, DW_AT_TI_symbol_name("VTOR")
     1921                            .dwattr $C$DW$117, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   36
@@ -2158,7 +2158,7 @@ system_msp432p401r.asm                                               PAGE   36
     1974                            .dwattr $C$DW$122, DW_AT_decl_line(0x1ee)
     1975                            .dwattr $C$DW$122, DW_AT_decl_column(0x12)
     1976                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   37
@@ -2218,7 +2218,7 @@ system_msp432p401r.asm                                               PAGE   37
     2029                            .dwattr $C$DW$128, DW_AT_name("AFSR")
     2030                            .dwattr $C$DW$128, DW_AT_TI_symbol_name("AFSR")
     2031                            .dwattr $C$DW$128, DW_AT_data_member_location[DW_OP_plus_uconst 0x3c]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   38
@@ -2278,7 +2278,7 @@ system_msp432p401r.asm                                               PAGE   38
     2084                            .dwattr $C$DW$133, DW_AT_decl_line(0x1f9)
     2085                            .dwattr $C$DW$133, DW_AT_decl_column(0x12)
     2086                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   39
@@ -2338,7 +2338,7 @@ system_msp432p401r.asm                                               PAGE   39
     2139                            .dwattr $C$DW$137, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     2140                            .dwattr $C$DW$137, DW_AT_decl_line(0x514)
     2141                            .dwattr $C$DW$137, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   40
@@ -2398,7 +2398,7 @@ system_msp432p401r.asm                                               PAGE   40
     2194                            .dwattr $C$DW$141, DW_AT_accessibility(DW_ACCESS_public)
     2195                            .dwattr $C$DW$141, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     2196                            .dwattr $C$DW$141, DW_AT_decl_line(0x46e)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   41
@@ -2458,7 +2458,7 @@ system_msp432p401r.asm                                               PAGE   41
     2249                    $C$DW$147       .dwtag  DW_TAG_member
     2250                            .dwattr $C$DW$147, DW_AT_type(*$C$DW$T$38)
     2251                            .dwattr $C$DW$147, DW_AT_name("RESERVED1")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   42
@@ -2518,7 +2518,7 @@ system_msp432p401r.asm                                               PAGE   42
     2304                            .dwattr $C$DW$T$41, DW_AT_byte_size(0x124)
     2305                    $C$DW$151       .dwtag  DW_TAG_member
     2306                            .dwattr $C$DW$151, DW_AT_type(*$C$DW$T$22)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   43
@@ -2578,7 +2578,7 @@ system_msp432p401r.asm                                               PAGE   43
     2359                            .dwattr $C$DW$156, DW_AT_data_member_location[DW_OP_plus_uconst 0x20]
     2360                            .dwattr $C$DW$156, DW_AT_accessibility(DW_ACCESS_public)
     2361                            .dwattr $C$DW$156, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   44
@@ -2638,7 +2638,7 @@ system_msp432p401r.asm                                               PAGE   44
     2414                    
     2415                    $C$DW$162       .dwtag  DW_TAG_member
     2416                            .dwattr $C$DW$162, DW_AT_type(*$C$DW$T$38)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   45
@@ -2698,7 +2698,7 @@ system_msp432p401r.asm                                               PAGE   45
     2469                            .dwattr $C$DW$167, DW_AT_data_member_location[DW_OP_plus_uconst 0x60]
     2470                            .dwattr $C$DW$167, DW_AT_accessibility(DW_ACCESS_public)
     2471                            .dwattr $C$DW$167, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   46
@@ -2758,7 +2758,7 @@ system_msp432p401r.asm                                               PAGE   46
     2524                    
     2525                    $C$DW$173       .dwtag  DW_TAG_member
     2526                            .dwattr $C$DW$173, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   47
@@ -2818,7 +2818,7 @@ system_msp432p401r.asm                                               PAGE   47
     2579                            .dwattr $C$DW$178, DW_AT_data_member_location[DW_OP_plus_uconst 0x8c]
     2580                            .dwattr $C$DW$178, DW_AT_accessibility(DW_ACCESS_public)
     2581                            .dwattr $C$DW$178, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   48
@@ -2878,7 +2878,7 @@ system_msp432p401r.asm                                               PAGE   48
     2634                    
     2635                    $C$DW$184       .dwtag  DW_TAG_member
     2636                            .dwattr $C$DW$184, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   49
@@ -2938,7 +2938,7 @@ system_msp432p401r.asm                                               PAGE   49
     2689                            .dwattr $C$DW$189, DW_AT_data_member_location[DW_OP_plus_uconst 0xc0]
     2690                            .dwattr $C$DW$189, DW_AT_accessibility(DW_ACCESS_public)
     2691                            .dwattr $C$DW$189, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   50
@@ -2998,7 +2998,7 @@ system_msp432p401r.asm                                               PAGE   50
     2744                    
     2745                    $C$DW$195       .dwtag  DW_TAG_member
     2746                            .dwattr $C$DW$195, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   51
@@ -3058,7 +3058,7 @@ system_msp432p401r.asm                                               PAGE   51
     2799                            .dwattr $C$DW$200, DW_AT_data_member_location[DW_OP_plus_uconst 0xfc]
     2800                            .dwattr $C$DW$200, DW_AT_accessibility(DW_ACCESS_public)
     2801                            .dwattr $C$DW$200, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   52
@@ -3118,7 +3118,7 @@ system_msp432p401r.asm                                               PAGE   52
     2854                    
     2855                    $C$DW$206       .dwtag  DW_TAG_member
     2856                            .dwattr $C$DW$206, DW_AT_type(*$C$DW$T$22)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   53
@@ -3178,7 +3178,7 @@ system_msp432p401r.asm                                               PAGE   53
     2909                    $C$DW$T$42      .dwtag  DW_TAG_structure_type
     2910                            .dwattr $C$DW$T$42, DW_AT_byte_size(0x04)
     2911                    $C$DW$210       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   54
@@ -3238,7 +3238,7 @@ system_msp432p401r.asm                                               PAGE   54
     2964                            .dwattr $C$DW$214, DW_AT_bit_size(0x01)
     2965                            .dwattr $C$DW$214, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     2966                            .dwattr $C$DW$214, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   55
@@ -3298,7 +3298,7 @@ system_msp432p401r.asm                                               PAGE   55
     3019                            .dwattr $C$DW$218, DW_AT_bit_offset(0x17)
     3020                            .dwattr $C$DW$218, DW_AT_bit_size(0x09)
     3021                            .dwattr $C$DW$218, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   56
@@ -3358,7 +3358,7 @@ system_msp432p401r.asm                                               PAGE   56
     3074                            .dwattr $C$DW$222, DW_AT_TI_symbol_name("GE")
     3075                            .dwattr $C$DW$222, DW_AT_bit_offset(0x0c)
     3076                            .dwattr $C$DW$222, DW_AT_bit_size(0x04)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   57
@@ -3418,7 +3418,7 @@ system_msp432p401r.asm                                               PAGE   57
     3129                            .dwattr $C$DW$226, DW_AT_decl_column(0x0e)
     3130                    
     3131                    $C$DW$227       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   58
@@ -3478,7 +3478,7 @@ system_msp432p401r.asm                                               PAGE   58
     3184                    
     3185                    $C$DW$T$45      .dwtag  DW_TAG_structure_type
     3186                            .dwattr $C$DW$T$45, DW_AT_byte_size(0x04)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   59
@@ -3538,7 +3538,7 @@ system_msp432p401r.asm                                               PAGE   59
     3239                    
     3240                    
     3241                    $C$DW$T$51      .dwtag  DW_TAG_structure_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   60
@@ -3598,7 +3598,7 @@ system_msp432p401r.asm                                               PAGE   60
     3294                            .dwattr $C$DW$240, DW_AT_type(*$C$DW$T$47)
     3295                            .dwattr $C$DW$240, DW_AT_name("RESERVED2")
     3296                            .dwattr $C$DW$240, DW_AT_TI_symbol_name("RESERVED2")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   61
@@ -3658,7 +3658,7 @@ system_msp432p401r.asm                                               PAGE   61
     3349                            .dwattr $C$DW$245, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     3350                            .dwattr $C$DW$245, DW_AT_decl_line(0x1cf)
     3351                            .dwattr $C$DW$245, DW_AT_decl_column(0x12)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   62
@@ -3718,7 +3718,7 @@ system_msp432p401r.asm                                               PAGE   62
     3404                            .dwattr $C$DW$249, DW_AT_accessibility(DW_ACCESS_public)
     3405                            .dwattr $C$DW$249, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     3406                            .dwattr $C$DW$249, DW_AT_decl_line(0x2c3)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   63
@@ -3778,7 +3778,7 @@ system_msp432p401r.asm                                               PAGE   63
     3459                            .dwattr $C$DW$253, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     3460                            .dwattr $C$DW$253, DW_AT_accessibility(DW_ACCESS_public)
     3461                            .dwattr $C$DW$253, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   64
@@ -3838,7 +3838,7 @@ system_msp432p401r.asm                                               PAGE   64
     3514                            .dwattr $C$DW$257, DW_AT_TI_symbol_name("TER")
     3515                            .dwattr $C$DW$257, DW_AT_data_member_location[DW_OP_plus_uconst 0xe00]
     3516                            .dwattr $C$DW$257, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   65
@@ -3898,7 +3898,7 @@ system_msp432p401r.asm                                               PAGE   65
     3569                            .dwattr $C$DW$262, DW_AT_decl_column(0x12)
     3570                    
     3571                    $C$DW$263       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   66
@@ -3958,7 +3958,7 @@ system_msp432p401r.asm                                               PAGE   66
     3624                            .dwattr $C$DW$268, DW_AT_TI_symbol_name("LSR")
     3625                            .dwattr $C$DW$268, DW_AT_data_member_location[DW_OP_plus_uconst 0xfb4]
     3626                            .dwattr $C$DW$268, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   67
@@ -4018,7 +4018,7 @@ system_msp432p401r.asm                                               PAGE   67
     3679                            .dwattr $C$DW$273, DW_AT_decl_column(0x12)
     3680                    
     3681                    $C$DW$274       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   68
@@ -4078,7 +4078,7 @@ system_msp432p401r.asm                                               PAGE   68
     3734                            .dwattr $C$DW$279, DW_AT_TI_symbol_name("CID1")
     3735                            .dwattr $C$DW$279, DW_AT_data_member_location[DW_OP_plus_uconst 0xff4]
     3736                            .dwattr $C$DW$279, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   69
@@ -4138,7 +4138,7 @@ system_msp432p401r.asm                                               PAGE   69
     3789                            .dwattr $C$DW$283, DW_AT_name("CYCCNT")
     3790                            .dwattr $C$DW$283, DW_AT_TI_symbol_name("CYCCNT")
     3791                            .dwattr $C$DW$283, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   70
@@ -4198,7 +4198,7 @@ system_msp432p401r.asm                                               PAGE   70
     3844                            .dwattr $C$DW$288, DW_AT_decl_line(0x38b)
     3845                            .dwattr $C$DW$288, DW_AT_decl_column(0x12)
     3846                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   71
@@ -4258,7 +4258,7 @@ system_msp432p401r.asm                                               PAGE   71
     3899                            .dwattr $C$DW$294, DW_AT_name("COMP1")
     3900                            .dwattr $C$DW$294, DW_AT_TI_symbol_name("COMP1")
     3901                            .dwattr $C$DW$294, DW_AT_data_member_location[DW_OP_plus_uconst 0x30]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   72
@@ -4318,7 +4318,7 @@ system_msp432p401r.asm                                               PAGE   72
     3954                            .dwattr $C$DW$299, DW_AT_decl_line(0x396)
     3955                            .dwattr $C$DW$299, DW_AT_decl_column(0x12)
     3956                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   73
@@ -4378,7 +4378,7 @@ system_msp432p401r.asm                                               PAGE   73
     4009                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x01)
     4010                            .dwendtag $C$DW$T$63
     4011                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   74
@@ -4438,7 +4438,7 @@ system_msp432p401r.asm                                               PAGE   74
     4064                            .dwattr $C$DW$309, DW_AT_type(*$C$DW$T$64)
     4065                            .dwattr $C$DW$309, DW_AT_name("RESERVED1")
     4066                            .dwattr $C$DW$309, DW_AT_TI_symbol_name("RESERVED1")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   75
@@ -4498,7 +4498,7 @@ system_msp432p401r.asm                                               PAGE   75
     4119                            .dwattr $C$DW$314, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     4120                            .dwattr $C$DW$314, DW_AT_decl_line(0x421)
     4121                            .dwattr $C$DW$314, DW_AT_decl_column(0x12)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   76
@@ -4558,7 +4558,7 @@ system_msp432p401r.asm                                               PAGE   76
     4174                            .dwattr $C$DW$320, DW_AT_type(*$C$DW$T$22)
     4175                            .dwattr $C$DW$320, DW_AT_name("ITATBCTR0")
     4176                            .dwattr $C$DW$320, DW_AT_TI_symbol_name("ITATBCTR0")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   77
@@ -4618,7 +4618,7 @@ system_msp432p401r.asm                                               PAGE   77
     4229                            .dwattr $C$DW$325, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     4230                            .dwattr $C$DW$325, DW_AT_decl_line(0x42c)
     4231                            .dwattr $C$DW$325, DW_AT_decl_column(0x12)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   78
@@ -4678,7 +4678,7 @@ system_msp432p401r.asm                                               PAGE   78
     4284                            .dwattr $C$DW$329, DW_AT_accessibility(DW_ACCESS_public)
     4285                            .dwattr $C$DW$329, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     4286                            .dwattr $C$DW$329, DW_AT_decl_line(0x4b4)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   79
@@ -4738,7 +4738,7 @@ system_msp432p401r.asm                                               PAGE   79
     4339                    $C$DW$335       .dwtag  DW_TAG_member
     4340                            .dwattr $C$DW$335, DW_AT_type(*$C$DW$T$20)
     4341                            .dwattr $C$DW$335, DW_AT_name("RASR_A1")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   80
@@ -4798,7 +4798,7 @@ system_msp432p401r.asm                                               PAGE   80
     4394                    $C$DW$T$187     .dwtag  DW_TAG_typedef
     4395                            .dwattr $C$DW$T$187, DW_AT_name("MPU_Type")
     4396                            .dwattr $C$DW$T$187, DW_AT_type(*$C$DW$T$70)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   81
@@ -4858,7 +4858,7 @@ system_msp432p401r.asm                                               PAGE   81
     4449                            .dwattr $C$DW$344, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
     4450                            .dwattr $C$DW$344, DW_AT_accessibility(DW_ACCESS_public)
     4451                            .dwattr $C$DW$344, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   82
@@ -4918,7 +4918,7 @@ system_msp432p401r.asm                                               PAGE   82
     4504                            .dwattr $C$DW$348, DW_AT_TI_symbol_name("DCRDR")
     4505                            .dwattr $C$DW$348, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     4506                            .dwattr $C$DW$348, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   83
@@ -4978,7 +4978,7 @@ system_msp432p401r.asm                                               PAGE   83
     4559                            .dwattr $C$DW$352, DW_AT_name("LO0")
     4560                            .dwattr $C$DW$352, DW_AT_TI_symbol_name("LO0")
     4561                            .dwattr $C$DW$352, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   84
@@ -5038,7 +5038,7 @@ system_msp432p401r.asm                                               PAGE   84
     4614                            .dwattr $C$DW$357, DW_AT_decl_line(0x167)
     4615                            .dwattr $C$DW$357, DW_AT_decl_column(0x11)
     4616                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   85
@@ -5098,7 +5098,7 @@ system_msp432p401r.asm                                               PAGE   85
     4669                            .dwattr $C$DW$363, DW_AT_name("CLRIFGR0")
     4670                            .dwattr $C$DW$363, DW_AT_TI_symbol_name("CLRIFGR0")
     4671                            .dwattr $C$DW$363, DW_AT_data_member_location[DW_OP_plus_uconst 0x14c]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   86
@@ -5158,7 +5158,7 @@ system_msp432p401r.asm                                               PAGE   86
     4724                            .dwattr $C$DW$367, DW_AT_type(*$C$DW$T$36)
     4725                            .dwattr $C$DW$367, DW_AT_name("CTL1")
     4726                            .dwattr $C$DW$367, DW_AT_TI_symbol_name("CTL1")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   87
@@ -5218,7 +5218,7 @@ system_msp432p401r.asm                                               PAGE   87
     4779                            .dwattr $C$DW$372, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     4780                            .dwattr $C$DW$372, DW_AT_decl_line(0x182)
     4781                            .dwattr $C$DW$372, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   88
@@ -5278,7 +5278,7 @@ system_msp432p401r.asm                                               PAGE   88
     4834                    $C$DW$T$192     .dwtag  DW_TAG_typedef
     4835                            .dwattr $C$DW$T$192, DW_AT_name("CAPTIO_Type")
     4836                            .dwattr $C$DW$T$192, DW_AT_type(*$C$DW$T$78)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   89
@@ -5338,7 +5338,7 @@ system_msp432p401r.asm                                               PAGE   89
     4889                            .dwattr $C$DW$380, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     4890                            .dwattr $C$DW$380, DW_AT_accessibility(DW_ACCESS_public)
     4891                            .dwattr $C$DW$380, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   90
@@ -5398,7 +5398,7 @@ system_msp432p401r.asm                                               PAGE   90
     4944                            .dwattr $C$DW$384, DW_AT_TI_symbol_name("RESERVED0")
     4945                            .dwattr $C$DW$384, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
     4946                            .dwattr $C$DW$384, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   91
@@ -5458,7 +5458,7 @@ system_msp432p401r.asm                                               PAGE   91
     4999                            .dwattr $C$DW$389, DW_AT_decl_column(0x11)
     5000                    
     5001                    $C$DW$390       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   92
@@ -5518,7 +5518,7 @@ system_msp432p401r.asm                                               PAGE   92
     5054                            .dwattr $C$DW$395, DW_AT_TI_symbol_name("INIRES16")
     5055                            .dwattr $C$DW$395, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
     5056                            .dwattr $C$DW$395, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   93
@@ -5578,7 +5578,7 @@ system_msp432p401r.asm                                               PAGE   93
     5109                            .dwattr $C$DW$399, DW_AT_name("IN_H")
     5110                            .dwattr $C$DW$399, DW_AT_TI_symbol_name("IN_H")
     5111                            .dwattr $C$DW$399, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   94
@@ -5638,7 +5638,7 @@ system_msp432p401r.asm                                               PAGE   94
     5164                            .dwattr $C$DW$403, DW_AT_type(*$C$DW$T$27)
     5165                            .dwattr $C$DW$403, DW_AT_name("DIR_H")
     5166                            .dwattr $C$DW$403, DW_AT_TI_symbol_name("DIR_H")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   95
@@ -5698,7 +5698,7 @@ system_msp432p401r.asm                                               PAGE   95
     5219                    $C$DW$407       .dwtag  DW_TAG_member
     5220                            .dwattr $C$DW$407, DW_AT_type(*$C$DW$T$27)
     5221                            .dwattr $C$DW$407, DW_AT_name("DS_H")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   96
@@ -5758,7 +5758,7 @@ system_msp432p401r.asm                                               PAGE   96
     5274                    
     5275                    $C$DW$411       .dwtag  DW_TAG_member
     5276                            .dwattr $C$DW$411, DW_AT_type(*$C$DW$T$27)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   97
@@ -5818,7 +5818,7 @@ system_msp432p401r.asm                                               PAGE   97
     5329                            .dwattr $C$DW$414, DW_AT_decl_column(0x14)
     5330                    
     5331                    $C$DW$415       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   98
@@ -5878,7 +5878,7 @@ system_msp432p401r.asm                                               PAGE   98
     5384                            .dwattr $C$DW$418, DW_AT_decl_line(0x236)
     5385                            .dwattr $C$DW$418, DW_AT_decl_column(0x14)
     5386                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE   99
@@ -5938,7 +5938,7 @@ system_msp432p401r.asm                                               PAGE   99
     5439                            .dwattr $C$DW$423, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
     5440                            .dwattr $C$DW$423, DW_AT_accessibility(DW_ACCESS_public)
     5441                            .dwattr $C$DW$423, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  100
@@ -5998,7 +5998,7 @@ system_msp432p401r.asm                                               PAGE  100
     5494                    
     5495                    $C$DW$429       .dwtag  DW_TAG_member
     5496                            .dwattr $C$DW$429, DW_AT_type(*$C$DW$T$157)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  101
@@ -6058,7 +6058,7 @@ system_msp432p401r.asm                                               PAGE  101
     5549                    
     5550                    $C$DW$T$195     .dwtag  DW_TAG_typedef
     5551                            .dwattr $C$DW$T$195, DW_AT_name("DIO_PORT_Interruptable_Type")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  102
@@ -6118,7 +6118,7 @@ system_msp432p401r.asm                                               PAGE  102
     5604                            .dwattr $C$DW$437, DW_AT_accessibility(DW_ACCESS_public)
     5605                            .dwattr $C$DW$437, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     5606                            .dwattr $C$DW$437, DW_AT_decl_line(0x249)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  103
@@ -6178,7 +6178,7 @@ system_msp432p401r.asm                                               PAGE  103
     5659                            .dwattr $C$DW$441, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
     5660                            .dwattr $C$DW$441, DW_AT_accessibility(DW_ACCESS_public)
     5661                            .dwattr $C$DW$441, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  104
@@ -6238,7 +6238,7 @@ system_msp432p401r.asm                                               PAGE  104
     5714                            .dwattr $C$DW$445, DW_AT_TI_symbol_name("SEL0_H")
     5715                            .dwattr $C$DW$445, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
     5716                            .dwattr $C$DW$445, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  105
@@ -6298,7 +6298,7 @@ system_msp432p401r.asm                                               PAGE  105
     5769                            .dwattr $C$DW$449, DW_AT_name("SELC_H")
     5770                            .dwattr $C$DW$449, DW_AT_TI_symbol_name("SELC_H")
     5771                            .dwattr $C$DW$449, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  106
@@ -6358,7 +6358,7 @@ system_msp432p401r.asm                                               PAGE  106
     5824                    
     5825                    $C$DW$454       .dwtag  DW_TAG_member
     5826                            .dwattr $C$DW$454, DW_AT_type(*$C$DW$T$165)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  107
@@ -6418,7 +6418,7 @@ system_msp432p401r.asm                                               PAGE  107
     5879                    
     5880                    $C$DW$T$196     .dwtag  DW_TAG_typedef
     5881                            .dwattr $C$DW$T$196, DW_AT_name("DIO_PORT_Not_Interruptable_Type")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  108
@@ -6478,7 +6478,7 @@ system_msp432p401r.asm                                               PAGE  108
     5934                            .dwattr $C$DW$463, DW_AT_TI_symbol_name("DIR")
     5935                            .dwattr $C$DW$463, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
     5936                            .dwattr $C$DW$463, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  109
@@ -6538,7 +6538,7 @@ system_msp432p401r.asm                                               PAGE  109
     5989                            .dwattr $C$DW$468, DW_AT_decl_column(0x0b)
     5990                    
     5991                    $C$DW$469       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  110
@@ -6598,7 +6598,7 @@ system_msp432p401r.asm                                               PAGE  110
     6044                            .dwattr $C$DW$474, DW_AT_TI_symbol_name("RESERVED7")
     6045                            .dwattr $C$DW$474, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
     6046                            .dwattr $C$DW$474, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  111
@@ -6658,7 +6658,7 @@ system_msp432p401r.asm                                               PAGE  111
     6099                            .dwattr $C$DW$479, DW_AT_decl_column(0x10)
     6100                    
     6101                    $C$DW$480       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  112
@@ -6718,7 +6718,7 @@ system_msp432p401r.asm                                               PAGE  112
     6154                            .dwattr $C$DW$483, DW_AT_decl_line(0x296)
     6155                            .dwattr $C$DW$483, DW_AT_decl_column(0x0f)
     6156                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  113
@@ -6778,7 +6778,7 @@ system_msp432p401r.asm                                               PAGE  113
     6209                            .dwattr $C$DW$489, DW_AT_name("REN")
     6210                            .dwattr $C$DW$489, DW_AT_TI_symbol_name("REN")
     6211                            .dwattr $C$DW$489, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  114
@@ -6838,7 +6838,7 @@ system_msp432p401r.asm                                               PAGE  114
     6264                            .dwattr $C$DW$494, DW_AT_decl_line(0x2a1)
     6265                            .dwattr $C$DW$494, DW_AT_decl_column(0x0b)
     6266                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  115
@@ -6898,7 +6898,7 @@ system_msp432p401r.asm                                               PAGE  115
     6319                            .dwattr $C$DW$500, DW_AT_name("RESERVED9")
     6320                            .dwattr $C$DW$500, DW_AT_TI_symbol_name("RESERVED9")
     6321                            .dwattr $C$DW$500, DW_AT_data_member_location[DW_OP_plus_uconst 0x1a]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  116
@@ -6958,7 +6958,7 @@ system_msp432p401r.asm                                               PAGE  116
     6374                            .dwattr $C$DW$T$198, DW_AT_type(*$C$DW$T$110)
     6375                            .dwattr $C$DW$T$198, DW_AT_language(DW_LANG_C)
     6376                            .dwattr $C$DW$T$198, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  117
@@ -7018,7 +7018,7 @@ system_msp432p401r.asm                                               PAGE  117
     6429                            .dwattr $C$DW$509, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     6430                            .dwattr $C$DW$509, DW_AT_decl_line(0x2bc)
     6431                            .dwattr $C$DW$509, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  118
@@ -7078,7 +7078,7 @@ system_msp432p401r.asm                                               PAGE  118
     6484                            .dwattr $C$DW$515, DW_AT_type(*$C$DW$T$20)
     6485                            .dwattr $C$DW$515, DW_AT_name("INT0_CLRFLG")
     6486                            .dwattr $C$DW$515, DW_AT_TI_symbol_name("INT0_CLRFLG")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  119
@@ -7138,7 +7138,7 @@ system_msp432p401r.asm                                               PAGE  119
     6539                    $C$DW$519       .dwtag  DW_TAG_member
     6540                            .dwattr $C$DW$519, DW_AT_type(*$C$DW$T$22)
     6541                            .dwattr $C$DW$519, DW_AT_name("ATLBASE")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  120
@@ -7198,7 +7198,7 @@ system_msp432p401r.asm                                               PAGE  120
     6594                            .dwattr $C$DW$524, DW_AT_accessibility(DW_ACCESS_public)
     6595                            .dwattr $C$DW$524, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     6596                            .dwattr $C$DW$524, DW_AT_decl_line(0x2ce)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  121
@@ -7258,7 +7258,7 @@ system_msp432p401r.asm                                               PAGE  121
     6649                    $C$DW$530       .dwtag  DW_TAG_member
     6650                            .dwattr $C$DW$530, DW_AT_type(*$C$DW$T$20)
     6651                            .dwattr $C$DW$530, DW_AT_name("PRIOSET")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  122
@@ -7318,7 +7318,7 @@ system_msp432p401r.asm                                               PAGE  122
     6704                            .dwattr $C$DW$T$114, DW_AT_byte_size(0x20)
     6705                    $C$DW$534       .dwtag  DW_TAG_member
     6706                            .dwattr $C$DW$534, DW_AT_type(*$C$DW$T$36)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  123
@@ -7378,7 +7378,7 @@ system_msp432p401r.asm                                               PAGE  123
     6759                            .dwattr $C$DW$539, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
     6760                            .dwattr $C$DW$539, DW_AT_accessibility(DW_ACCESS_public)
     6761                            .dwattr $C$DW$539, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  124
@@ -7438,7 +7438,7 @@ system_msp432p401r.asm                                               PAGE  124
     6814                    
     6815                    $C$DW$545       .dwtag  DW_TAG_member
     6816                            .dwattr $C$DW$545, DW_AT_type(*$C$DW$T$36)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  125
@@ -7498,7 +7498,7 @@ system_msp432p401r.asm                                               PAGE  125
     6869                            .dwattr $C$DW$548, DW_AT_decl_column(0x11)
     6870                    
     6871                    $C$DW$549       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  126
@@ -7558,7 +7558,7 @@ system_msp432p401r.asm                                               PAGE  126
     6924                            .dwattr $C$DW$554, DW_AT_TI_symbol_name("TXBUF")
     6925                            .dwattr $C$DW$554, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
     6926                            .dwattr $C$DW$554, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  127
@@ -7618,7 +7618,7 @@ system_msp432p401r.asm                                               PAGE  127
     6979                            .dwattr $C$DW$T$202, DW_AT_language(DW_LANG_C)
     6980                            .dwattr $C$DW$T$202, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
     6981                            .dwattr $C$DW$T$202, DW_AT_decl_line(0x305)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  128
@@ -7678,7 +7678,7 @@ system_msp432p401r.asm                                               PAGE  128
     7034                            .dwattr $C$DW$563, DW_AT_decl_line(0x315)
     7035                            .dwattr $C$DW$563, DW_AT_decl_column(0x11)
     7036                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  129
@@ -7738,7 +7738,7 @@ system_msp432p401r.asm                                               PAGE  129
     7089                            .dwattr $C$DW$569, DW_AT_name("I2COA1")
     7090                            .dwattr $C$DW$569, DW_AT_TI_symbol_name("I2COA1")
     7091                            .dwattr $C$DW$569, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  130
@@ -7798,7 +7798,7 @@ system_msp432p401r.asm                                               PAGE  130
     7144                            .dwattr $C$DW$574, DW_AT_decl_line(0x320)
     7145                            .dwattr $C$DW$574, DW_AT_decl_column(0x11)
     7146                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  131
@@ -7858,7 +7858,7 @@ system_msp432p401r.asm                                               PAGE  131
     7199                    
     7200                    
     7201                    $C$DW$T$119     .dwtag  DW_TAG_structure_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  132
@@ -7918,7 +7918,7 @@ system_msp432p401r.asm                                               PAGE  132
     7254                            .dwattr $C$DW$584, DW_AT_type(*$C$DW$T$80)
     7255                            .dwattr $C$DW$584, DW_AT_name("RXBUF")
     7256                            .dwattr $C$DW$584, DW_AT_TI_symbol_name("RXBUF")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  133
@@ -7978,7 +7978,7 @@ system_msp432p401r.asm                                               PAGE  133
     7309                            .dwattr $C$DW$589, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     7310                            .dwattr $C$DW$589, DW_AT_decl_line(0x337)
     7311                            .dwattr $C$DW$589, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  134
@@ -8038,7 +8038,7 @@ system_msp432p401r.asm                                               PAGE  134
     7364                            .dwattr $C$DW$593, DW_AT_accessibility(DW_ACCESS_public)
     7365                            .dwattr $C$DW$593, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     7366                            .dwattr $C$DW$593, DW_AT_decl_line(0x38e)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  135
@@ -8098,7 +8098,7 @@ system_msp432p401r.asm                                               PAGE  135
     7419                    $C$DW$599       .dwtag  DW_TAG_member
     7420                            .dwattr $C$DW$599, DW_AT_type(*$C$DW$T$23)
     7421                            .dwattr $C$DW$599, DW_AT_name("RESERVED0")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  136
@@ -8158,7 +8158,7 @@ system_msp432p401r.asm                                               PAGE  136
     7474                    
     7475                    $C$DW$603       .dwtag  DW_TAG_member
     7476                            .dwattr $C$DW$603, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  137
@@ -8218,7 +8218,7 @@ system_msp432p401r.asm                                               PAGE  137
     7529                            .dwattr $C$DW$606, DW_AT_decl_column(0x11)
     7530                    
     7531                    $C$DW$607       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  138
@@ -8278,7 +8278,7 @@ system_msp432p401r.asm                                               PAGE  138
     7584                            .dwattr $C$DW$612, DW_AT_TI_symbol_name("JTAG_SWD_LOCK_UNENC_PWD")
     7585                            .dwattr $C$DW$612, DW_AT_data_member_location[DW_OP_plus_uconst 0x44]
     7586                            .dwattr $C$DW$612, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  139
@@ -8338,7 +8338,7 @@ system_msp432p401r.asm                                               PAGE  139
     7639                            .dwattr $C$DW$617, DW_AT_decl_column(0x11)
     7640                    
     7641                    $C$DW$618       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  140
@@ -8398,7 +8398,7 @@ system_msp432p401r.asm                                               PAGE  140
     7694                            .dwattr $C$DW$623, DW_AT_TI_symbol_name("JTAG_SWD_LOCK_DST_ADDR")
     7695                            .dwattr $C$DW$623, DW_AT_data_member_location[DW_OP_plus_uconst 0x200]
     7696                            .dwattr $C$DW$623, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  141
@@ -8458,7 +8458,7 @@ system_msp432p401r.asm                                               PAGE  141
     7749                            .dwattr $C$DW$628, DW_AT_decl_column(0x11)
     7750                    
     7751                    $C$DW$629       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  142
@@ -8518,7 +8518,7 @@ system_msp432p401r.asm                                               PAGE  142
     7804                            .dwattr $C$DW$634, DW_AT_TI_symbol_name("FACTORY_RESET_ACK")
     7805                            .dwattr $C$DW$634, DW_AT_data_member_location[DW_OP_plus_uconst 0x280]
     7806                            .dwattr $C$DW$634, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  143
@@ -8578,7 +8578,7 @@ system_msp432p401r.asm                                               PAGE  143
     7859                            .dwattr $C$DW$638, DW_AT_name("CTL1")
     7860                            .dwattr $C$DW$638, DW_AT_TI_symbol_name("CTL1")
     7861                            .dwattr $C$DW$638, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  144
@@ -8638,7 +8638,7 @@ system_msp432p401r.asm                                               PAGE  144
     7914                            .dwattr $C$DW$642, DW_AT_type(*$C$DW$T$36)
     7915                            .dwattr $C$DW$642, DW_AT_name("KEYID")
     7916                            .dwattr $C$DW$642, DW_AT_TI_symbol_name("KEYID")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  145
@@ -8698,7 +8698,7 @@ system_msp432p401r.asm                                               PAGE  145
     7969                    $C$DW$646       .dwtag  DW_TAG_member
     7970                            .dwattr $C$DW$646, DW_AT_type(*$C$DW$T$27)
     7971                            .dwattr $C$DW$646, DW_AT_name("PMAP_REGISTER2")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  146
@@ -8758,7 +8758,7 @@ system_msp432p401r.asm                                               PAGE  146
     8024                            .dwattr $C$DW$651, DW_AT_accessibility(DW_ACCESS_public)
     8025                            .dwattr $C$DW$651, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     8026                            .dwattr $C$DW$651, DW_AT_decl_line(0x3f4)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  147
@@ -8818,7 +8818,7 @@ system_msp432p401r.asm                                               PAGE  147
     8079                            .dwattr $C$DW$654, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     8080                            .dwattr $C$DW$654, DW_AT_decl_line(0x404)
     8081                            .dwattr $C$DW$654, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  148
@@ -8878,7 +8878,7 @@ system_msp432p401r.asm                                               PAGE  148
     8134                            .dwattr $C$DW$T$209, DW_AT_decl_column(0x03)
     8135                    
     8136                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  149
@@ -8938,7 +8938,7 @@ system_msp432p401r.asm                                               PAGE  149
     8189                            .dwattr $C$DW$662, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
     8190                            .dwattr $C$DW$662, DW_AT_accessibility(DW_ACCESS_public)
     8191                            .dwattr $C$DW$662, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  150
@@ -8998,7 +8998,7 @@ system_msp432p401r.asm                                               PAGE  150
     8244                    
     8245                    $C$DW$668       .dwtag  DW_TAG_member
     8246                            .dwattr $C$DW$668, DW_AT_type(*$C$DW$T$22)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  151
@@ -9058,7 +9058,7 @@ system_msp432p401r.asm                                               PAGE  151
     8299                            .dwattr $C$DW$673, DW_AT_data_member_location[DW_OP_plus_uconst 0x114]
     8300                            .dwattr $C$DW$673, DW_AT_accessibility(DW_ACCESS_public)
     8301                            .dwattr $C$DW$673, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  152
@@ -9118,7 +9118,7 @@ system_msp432p401r.asm                                               PAGE  152
     8354                            .dwattr $C$DW$T$211, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
     8355                            .dwattr $C$DW$T$211, DW_AT_decl_line(0x434)
     8356                            .dwattr $C$DW$T$211, DW_AT_decl_column(0x03)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  153
@@ -9178,7 +9178,7 @@ system_msp432p401r.asm                                               PAGE  153
     8409                            .dwattr $C$DW$682, DW_AT_decl_column(0x11)
     8410                    
     8411                    $C$DW$683       .dwtag  DW_TAG_member
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  154
@@ -9238,7 +9238,7 @@ system_msp432p401r.asm                                               PAGE  154
     8464                            .dwattr $C$DW$688, DW_AT_TI_symbol_name("DATE")
     8465                            .dwattr $C$DW$688, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
     8466                            .dwattr $C$DW$688, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  155
@@ -9298,7 +9298,7 @@ system_msp432p401r.asm                                               PAGE  155
     8519                            .dwattr $C$DW$693, DW_AT_decl_column(0x11)
     8520                    
     8521                            .dwattr $C$DW$T$137, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  156
@@ -9358,7 +9358,7 @@ system_msp432p401r.asm                                               PAGE  156
     8574                            .dwattr $C$DW$697, DW_AT_decl_line(0x45b)
     8575                            .dwattr $C$DW$697, DW_AT_decl_column(0x11)
     8576                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  157
@@ -9418,7 +9418,7 @@ system_msp432p401r.asm                                               PAGE  157
     8629                            .dwattr $C$DW$701, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     8630                            .dwattr $C$DW$701, DW_AT_decl_line(0x47b)
     8631                            .dwattr $C$DW$701, DW_AT_decl_column(0x11)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  158
@@ -9478,7 +9478,7 @@ system_msp432p401r.asm                                               PAGE  158
     8684                            .dwattr $C$DW$707, DW_AT_type(*$C$DW$T$22)
     8685                            .dwattr $C$DW$707, DW_AT_name("SYSTEM_STAT")
     8686                            .dwattr $C$DW$707, DW_AT_TI_symbol_name("SYSTEM_STAT")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  159
@@ -9538,7 +9538,7 @@ system_msp432p401r.asm                                               PAGE  159
     8739                    $C$DW$711       .dwtag  DW_TAG_member
     8740                            .dwattr $C$DW$711, DW_AT_type(*$C$DW$T$20)
     8741                            .dwattr $C$DW$711, DW_AT_name("INTCLR")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  160
@@ -9598,7 +9598,7 @@ system_msp432p401r.asm                                               PAGE  160
     8794                            .dwattr $C$DW$T$144, DW_AT_byte_size(0x30)
     8795                    $C$DW$715       .dwtag  DW_TAG_member
     8796                            .dwattr $C$DW$715, DW_AT_type(*$C$DW$T$36)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  161
@@ -9658,7 +9658,7 @@ system_msp432p401r.asm                                               PAGE  161
     8849                            .dwattr $C$DW$720, DW_AT_data_member_location[DW_OP_plus_uconst 0x22]
     8850                            .dwattr $C$DW$720, DW_AT_accessibility(DW_ACCESS_public)
     8851                            .dwattr $C$DW$720, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  162
@@ -9718,7 +9718,7 @@ system_msp432p401r.asm                                               PAGE  162
     8904                            .dwendtag $C$DW$T$145
     8905                    
     8906                    $C$DW$T$217     .dwtag  DW_TAG_typedef
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  163
@@ -9778,7 +9778,7 @@ system_msp432p401r.asm                                               PAGE  163
     8959                            .dwattr $C$DW$726, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     8960                            .dwattr $C$DW$726, DW_AT_decl_line(0x17c)
     8961                            .dwattr $C$DW$726, DW_AT_decl_column(0x05)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  164
@@ -9838,7 +9838,7 @@ system_msp432p401r.asm                                               PAGE  164
     9014                    $C$DW$T$220     .dwtag  DW_TAG_typedef
     9015                            .dwattr $C$DW$T$220, DW_AT_name("CONTROL_Type")
     9016                            .dwattr $C$DW$T$220, DW_AT_type(*$C$DW$T$148)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  165
@@ -9898,7 +9898,7 @@ system_msp432p401r.asm                                               PAGE  165
     9069                            .dwattr $C$DW$733, DW_AT_upper_bound(0x1f)
     9070                    
     9071                            .dwendtag $C$DW$T$56
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  166
@@ -9958,7 +9958,7 @@ system_msp432p401r.asm                                               PAGE  166
     9124                            .dwattr $C$DW$T$151, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
     9125                            .dwattr $C$DW$T$151, DW_AT_decl_line(0x1f2)
     9126                            .dwattr $C$DW$T$151, DW_AT_decl_column(0x09)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  167
@@ -10018,7 +10018,7 @@ system_msp432p401r.asm                                               PAGE  167
     9179                    
     9180                            .dwattr $C$DW$T$153, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
     9181                            .dwattr $C$DW$T$153, DW_AT_decl_line(0x200)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  168
@@ -10078,7 +10078,7 @@ system_msp432p401r.asm                                               PAGE  168
     9234                            .dwattr $C$DW$745, DW_AT_decl_column(0x05)
     9235                    
     9236                            .dwattr $C$DW$T$155, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_2
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  169
@@ -10138,7 +10138,7 @@ system_msp432p401r.asm                                               PAGE  169
     9289                            .dwattr $C$DW$749, DW_AT_decl_line(0x220)
     9290                            .dwattr $C$DW$749, DW_AT_decl_column(0x05)
     9291                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  170
@@ -10198,7 +10198,7 @@ system_msp432p401r.asm                                               PAGE  170
     9344                            .dwattr $C$DW$753, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     9345                            .dwattr $C$DW$753, DW_AT_decl_line(0x22e)
     9346                            .dwattr $C$DW$753, DW_AT_decl_column(0x05)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  171
@@ -10258,7 +10258,7 @@ system_msp432p401r.asm                                               PAGE  171
     9399                            .dwattr $C$DW$757, DW_AT_accessibility(DW_ACCESS_public)
     9400                            .dwattr $C$DW$757, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     9401                            .dwattr $C$DW$757, DW_AT_decl_line(0x240)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  172
@@ -10318,7 +10318,7 @@ system_msp432p401r.asm                                               PAGE  172
     9454                            .dwattr $C$DW$761, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     9455                            .dwattr $C$DW$761, DW_AT_accessibility(DW_ACCESS_public)
     9456                            .dwattr $C$DW$761, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  173
@@ -10378,7 +10378,7 @@ system_msp432p401r.asm                                               PAGE  173
     9509                            .dwattr $C$DW$765, DW_AT_TI_symbol_name("$P$T26")
     9510                            .dwattr $C$DW$765, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
     9511                            .dwattr $C$DW$765, DW_AT_accessibility(DW_ACCESS_public)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  174
@@ -10438,7 +10438,7 @@ system_msp432p401r.asm                                               PAGE  174
     9564                            .dwattr $C$DW$769, DW_AT_name("$P$T28")
     9565                            .dwattr $C$DW$769, DW_AT_TI_symbol_name("$P$T28")
     9566                            .dwattr $C$DW$769, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  175
@@ -10498,7 +10498,7 @@ system_msp432p401r.asm                                               PAGE  175
     9619                            .dwattr $C$DW$773, DW_AT_type(*$C$DW$T$130)
     9620                            .dwattr $C$DW$773, DW_AT_name("$P$T38")
     9621                            .dwattr $C$DW$773, DW_AT_TI_symbol_name("$P$T38")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  176
@@ -10558,7 +10558,7 @@ system_msp432p401r.asm                                               PAGE  176
     9674                            .dwattr $C$DW$779, DW_AT_const_value(-5)
     9675                            .dwattr $C$DW$779, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
     9676                            .dwattr $C$DW$779, DW_AT_decl_line(0x6c)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  177
@@ -10618,7 +10618,7 @@ system_msp432p401r.asm                                               PAGE  177
     9729                            .dwattr $C$DW$787, DW_AT_name("FPU_IRQn")
     9730                            .dwattr $C$DW$787, DW_AT_const_value(0x04)
     9731                            .dwattr $C$DW$787, DW_AT_decl_file("/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  178
@@ -10678,7 +10678,7 @@ system_msp432p401r.asm                                               PAGE  178
     9784                    $C$DW$795       .dwtag  DW_TAG_enumerator
     9785                            .dwattr $C$DW$795, DW_AT_name("TA2_0_IRQn")
     9786                            .dwattr $C$DW$795, DW_AT_const_value(0x0c)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  179
@@ -10738,7 +10738,7 @@ system_msp432p401r.asm                                               PAGE  179
     9839                    
     9840                    $C$DW$803       .dwtag  DW_TAG_enumerator
     9841                            .dwattr $C$DW$803, DW_AT_name("EUSCIB0_IRQn")
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  180
@@ -10798,7 +10798,7 @@ system_msp432p401r.asm                                               PAGE  180
     9894                            .dwattr $C$DW$810, DW_AT_decl_column(0x03)
     9895                    
     9896                    $C$DW$811       .dwtag  DW_TAG_enumerator
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  181
@@ -10858,7 +10858,7 @@ system_msp432p401r.asm                                               PAGE  181
     9949                            .dwattr $C$DW$818, DW_AT_decl_line(0x94)
     9950                            .dwattr $C$DW$818, DW_AT_decl_column(0x03)
     9951                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  182
@@ -10918,7 +10918,7 @@ system_msp432p401r.asm                                               PAGE  182
    10004                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
    10005                            .dwattr $C$DW$T$4, DW_AT_name("bool")
    10006                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  183
@@ -10978,7 +10978,7 @@ system_msp432p401r.asm                                               PAGE  183
    10059                    
    10060                            .dwendtag $C$DW$T$109
    10061                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  184
@@ -11038,7 +11038,7 @@ system_msp432p401r.asm                                               PAGE  184
    10114                            .dwattr $C$DW$T$229, DW_AT_decl_line(0x2c)
    10115                            .dwattr $C$DW$T$229, DW_AT_decl_column(0x1d)
    10116                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  185
@@ -11098,7 +11098,7 @@ system_msp432p401r.asm                                               PAGE  185
    10169                    $C$DW$T$95      .dwtag  DW_TAG_array_type
    10170                            .dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$34)
    10171                            .dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  186
@@ -11158,7 +11158,7 @@ system_msp432p401r.asm                                               PAGE  186
    10224                            .dwattr $C$DW$T$143, DW_AT_language(DW_LANG_C)
    10225                            .dwattr $C$DW$T$143, DW_AT_byte_size(0x0e)
    10226                    $C$DW$837       .dwtag  DW_TAG_subrange_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  187
@@ -11218,7 +11218,7 @@ system_msp432p401r.asm                                               PAGE  187
    10279                            .dwattr $C$DW$T$235, DW_AT_language(DW_LANG_C)
    10280                            .dwattr $C$DW$T$235, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
    10281                            .dwattr $C$DW$T$235, DW_AT_decl_line(0x4a)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  188
@@ -11278,7 +11278,7 @@ system_msp432p401r.asm                                               PAGE  188
    10334                            .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
    10335                            .dwattr $C$DW$T$23, DW_AT_byte_size(0x08)
    10336                    $C$DW$841       .dwtag  DW_TAG_subrange_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  189
@@ -11338,7 +11338,7 @@ system_msp432p401r.asm                                               PAGE  189
    10389                            .dwendtag $C$DW$T$48
    10390                    
    10391                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  190
@@ -11398,7 +11398,7 @@ system_msp432p401r.asm                                               PAGE  190
    10444                            .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
    10445                            .dwattr $C$DW$T$60, DW_AT_byte_size(0xac)
    10446                    $C$DW$852       .dwtag  DW_TAG_subrange_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  191
@@ -11458,7 +11458,7 @@ system_msp432p401r.asm                                               PAGE  191
    10499                            .dwendtag $C$DW$T$67
    10500                    
    10501                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  192
@@ -11518,7 +11518,7 @@ system_msp432p401r.asm                                               PAGE  192
    10554                    
    10555                    $C$DW$T$46      .dwtag  DW_TAG_array_type
    10556                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$20)
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  193
@@ -11578,7 +11578,7 @@ system_msp432p401r.asm                                               PAGE  193
    10609                    
    10610                    
    10611                    $C$DW$T$30      .dwtag  DW_TAG_array_type
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  194
@@ -11638,7 +11638,7 @@ system_msp432p401r.asm                                               PAGE  194
    10664                            .dwattr $C$DW$T$246, DW_AT_type(*$C$DW$T$11)
    10665                            .dwattr $C$DW$T$246, DW_AT_language(DW_LANG_C)
    10666                            .dwattr $C$DW$T$246, DW_AT_decl_file("/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  195
@@ -11698,7 +11698,7 @@ system_msp432p401r.asm                                               PAGE  195
    10719                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
    10720                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
    10721                    
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  196
@@ -11758,7 +11758,7 @@ system_msp432p401r.asm                                               PAGE  196
    10774                    
    10775                    $C$DW$CIE       .dwcie 14
    10776                            .dwcfi  cfa_register, 13
-TI ARM Assembler Unix v16.9.0 Sat Apr 29 07:00:43 2017
+TI ARM Assembler Unix v16.9.0 Sun Apr 30 23:23:08 2017
 
 Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
 system_msp432p401r.asm                                               PAGE  197

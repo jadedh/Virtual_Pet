@@ -16,24 +16,58 @@ ORDERED_OBJS += \
 "./LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj" \
 "./ccs/startup_msp432p401r_ccs.obj" \
 "./fonts/fontfixed6x8.obj" \
-"./image/eat1.obj" \
-"./image/eat2.obj" \
-"./image/eat3.obj" \
-"./image/happy1.obj" \
-"./image/happy2.obj" \
-"./image/happy3.obj" \
-"./image/normal1.obj" \
-"./image/normal2.obj" \
-"./image/normal3.obj" \
-"./image/play1.obj" \
-"./image/play2.obj" \
-"./image/play3.obj" \
-"./image/unhappy1.obj" \
-"./image/unhappy2.obj" \
-"./image/unhappy3.obj" \
-"./image/walk1.obj" \
-"./image/walk2.obj" \
-"./image/walk3.obj" \
+"./pet_doggy/dead.obj" \
+"./pet_doggy/dizzy1.obj" \
+"./pet_doggy/dizzy2.obj" \
+"./pet_doggy/eat1.obj" \
+"./pet_doggy/eat2.obj" \
+"./pet_doggy/eat3.obj" \
+"./pet_doggy/happy1.obj" \
+"./pet_doggy/happy2.obj" \
+"./pet_doggy/happy3.obj" \
+"./pet_doggy/normal1.obj" \
+"./pet_doggy/normal2.obj" \
+"./pet_doggy/normal3.obj" \
+"./pet_doggy/play1.obj" \
+"./pet_doggy/play2.obj" \
+"./pet_doggy/play3.obj" \
+"./pet_doggy/poop1.obj" \
+"./pet_doggy/poop2.obj" \
+"./pet_doggy/sleep1.obj" \
+"./pet_doggy/sleep2.obj" \
+"./pet_doggy/sleep3.obj" \
+"./pet_doggy/unhappy1.obj" \
+"./pet_doggy/unhappy2.obj" \
+"./pet_doggy/unhappy3.obj" \
+"./pet_doggy/walk1.obj" \
+"./pet_doggy/walk2.obj" \
+"./pet_doggy/walk3.obj" \
+"./pet_mametchi/pet1_dead.obj" \
+"./pet_mametchi/pet1_dizzy1.obj" \
+"./pet_mametchi/pet1_dizzy2.obj" \
+"./pet_mametchi/pet1_eat1.obj" \
+"./pet_mametchi/pet1_eat2.obj" \
+"./pet_mametchi/pet1_eat3.obj" \
+"./pet_mametchi/pet1_happy1.obj" \
+"./pet_mametchi/pet1_happy2.obj" \
+"./pet_mametchi/pet1_happy3.obj" \
+"./pet_mametchi/pet1_normal1.obj" \
+"./pet_mametchi/pet1_normal2.obj" \
+"./pet_mametchi/pet1_normal3.obj" \
+"./pet_mametchi/pet1_play1.obj" \
+"./pet_mametchi/pet1_play2.obj" \
+"./pet_mametchi/pet1_play3.obj" \
+"./pet_mametchi/pet1_poop1.obj" \
+"./pet_mametchi/pet1_poop2.obj" \
+"./pet_mametchi/pet1_sleep1.obj" \
+"./pet_mametchi/pet1_sleep2.obj" \
+"./pet_mametchi/pet1_sleep3.obj" \
+"./pet_mametchi/pet1_unhappy1.obj" \
+"./pet_mametchi/pet1_unhappy2.obj" \
+"./pet_mametchi/pet1_unhappy3.obj" \
+"./pet_mametchi/pet1_walk1.obj" \
+"./pet_mametchi/pet1_walk2.obj" \
+"./pet_mametchi/pet1_walk3.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
 -l"/Users/jadedh/ti/tirex-content/simplelink_msp432_sdk_1_20_00_45/source/ti/grlib/ccs/grlib.lib" \
@@ -51,12 +85,14 @@ RMDIR := rm -rf
 -include LcdDriver/subdir_vars.mk
 -include ccs/subdir_vars.mk
 -include fonts/subdir_vars.mk
--include image/subdir_vars.mk
+-include pet_doggy/subdir_vars.mk
+-include pet_mametchi/subdir_vars.mk
 -include subdir_rules.mk
 -include LcdDriver/subdir_rules.mk
 -include ccs/subdir_rules.mk
 -include fonts/subdir_rules.mk
--include image/subdir_rules.mk
+-include pet_doggy/subdir_rules.mk
+-include pet_mametchi/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -186,8 +222,14 @@ PET.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "color.obj" "color2.obj" "main.obj" "system_msp432p401r.obj" "LcdDriver/Crystalfontz128x128_ST7735.obj" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj" "ccs/startup_msp432p401r_ccs.obj" "fonts/fontfixed6x8.obj" "image/eat1.obj" "image/eat2.obj" "image/eat3.obj" "image/happy1.obj" "image/happy2.obj" "image/happy3.obj" "image/normal1.obj" "image/normal2.obj" "image/normal3.obj" "image/play1.obj" "image/play2.obj" "image/play3.obj" "image/unhappy1.obj" "image/unhappy2.obj" "image/unhappy3.obj" "image/walk1.obj" "image/walk2.obj" "image/walk3.obj" 
-	-$(RM) "color.d" "color2.d" "main.d" "system_msp432p401r.d" "LcdDriver/Crystalfontz128x128_ST7735.d" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.d" "ccs/startup_msp432p401r_ccs.d" "fonts/fontfixed6x8.d" "image/eat1.d" "image/eat2.d" "image/eat3.d" "image/happy1.d" "image/happy2.d" "image/happy3.d" "image/normal1.d" "image/normal2.d" "image/normal3.d" "image/play1.d" "image/play2.d" "image/play3.d" "image/unhappy1.d" "image/unhappy2.d" "image/unhappy3.d" "image/walk1.d" "image/walk2.d" "image/walk3.d" 
+	-$(RM) "color.lst" "color2.lst" "main.lst" "system_msp432p401r.lst" "LcdDriver/Crystalfontz128x128_ST7735.lst" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.lst" "ccs/startup_msp432p401r_ccs.lst" "fonts/fontfixed6x8.lst" "pet_doggy/dead.lst" "pet_doggy/dizzy1.lst" "pet_doggy/dizzy2.lst" "pet_doggy/eat1.lst" "pet_doggy/eat2.lst" "pet_doggy/eat3.lst" "pet_doggy/happy1.lst" "pet_doggy/happy2.lst" "pet_doggy/happy3.lst" "pet_doggy/normal1.lst" "pet_doggy/normal2.lst" "pet_doggy/normal3.lst" "pet_doggy/play1.lst" "pet_doggy/play2.lst" "pet_doggy/play3.lst" "pet_doggy/poop1.lst" "pet_doggy/poop2.lst" "pet_doggy/sleep1.lst" "pet_doggy/sleep2.lst" "pet_doggy/sleep3.lst" "pet_doggy/unhappy1.lst" "pet_doggy/unhappy2.lst" "pet_doggy/unhappy3.lst" "pet_doggy/walk1.lst" "pet_doggy/walk2.lst" "pet_doggy/walk3.lst" "pet_mametchi/pet1_dead.lst" "pet_mametchi/pet1_dizzy1.lst" "pet_mametchi/pet1_dizzy2.lst" "pet_mametchi/pet1_eat1.lst" "pet_mametchi/pet1_eat2.lst" "pet_mametchi/pet1_eat3.lst" "pet_mametchi/pet1_happy1.lst" 
+	-$(RM) "pet_mametchi/pet1_happy2.lst" "pet_mametchi/pet1_happy3.lst" "pet_mametchi/pet1_normal1.lst" "pet_mametchi/pet1_normal2.lst" "pet_mametchi/pet1_normal3.lst" "pet_mametchi/pet1_play1.lst" "pet_mametchi/pet1_play2.lst" "pet_mametchi/pet1_play3.lst" "pet_mametchi/pet1_poop1.lst" "pet_mametchi/pet1_poop2.lst" "pet_mametchi/pet1_sleep1.lst" "pet_mametchi/pet1_sleep2.lst" "pet_mametchi/pet1_sleep3.lst" "pet_mametchi/pet1_unhappy1.lst" "pet_mametchi/pet1_unhappy2.lst" "pet_mametchi/pet1_unhappy3.lst" "pet_mametchi/pet1_walk1.lst" "pet_mametchi/pet1_walk2.lst" "pet_mametchi/pet1_walk3.lst" 
+	-$(RM) "color.obj" "color2.obj" "main.obj" "system_msp432p401r.obj" "LcdDriver/Crystalfontz128x128_ST7735.obj" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj" "ccs/startup_msp432p401r_ccs.obj" "fonts/fontfixed6x8.obj" "pet_doggy/dead.obj" "pet_doggy/dizzy1.obj" "pet_doggy/dizzy2.obj" "pet_doggy/eat1.obj" "pet_doggy/eat2.obj" "pet_doggy/eat3.obj" "pet_doggy/happy1.obj" "pet_doggy/happy2.obj" "pet_doggy/happy3.obj" "pet_doggy/normal1.obj" "pet_doggy/normal2.obj" "pet_doggy/normal3.obj" "pet_doggy/play1.obj" "pet_doggy/play2.obj" "pet_doggy/play3.obj" "pet_doggy/poop1.obj" "pet_doggy/poop2.obj" "pet_doggy/sleep1.obj" "pet_doggy/sleep2.obj" "pet_doggy/sleep3.obj" "pet_doggy/unhappy1.obj" "pet_doggy/unhappy2.obj" "pet_doggy/unhappy3.obj" "pet_doggy/walk1.obj" "pet_doggy/walk2.obj" "pet_doggy/walk3.obj" "pet_mametchi/pet1_dead.obj" "pet_mametchi/pet1_dizzy1.obj" "pet_mametchi/pet1_dizzy2.obj" "pet_mametchi/pet1_eat1.obj" "pet_mametchi/pet1_eat2.obj" "pet_mametchi/pet1_eat3.obj" "pet_mametchi/pet1_happy1.obj" 
+	-$(RM) "pet_mametchi/pet1_happy2.obj" "pet_mametchi/pet1_happy3.obj" "pet_mametchi/pet1_normal1.obj" "pet_mametchi/pet1_normal2.obj" "pet_mametchi/pet1_normal3.obj" "pet_mametchi/pet1_play1.obj" "pet_mametchi/pet1_play2.obj" "pet_mametchi/pet1_play3.obj" "pet_mametchi/pet1_poop1.obj" "pet_mametchi/pet1_poop2.obj" "pet_mametchi/pet1_sleep1.obj" "pet_mametchi/pet1_sleep2.obj" "pet_mametchi/pet1_sleep3.obj" "pet_mametchi/pet1_unhappy1.obj" "pet_mametchi/pet1_unhappy2.obj" "pet_mametchi/pet1_unhappy3.obj" "pet_mametchi/pet1_walk1.obj" "pet_mametchi/pet1_walk2.obj" "pet_mametchi/pet1_walk3.obj" 
+	-$(RM) "color.d" "color2.d" "main.d" "system_msp432p401r.d" "LcdDriver/Crystalfontz128x128_ST7735.d" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.d" "ccs/startup_msp432p401r_ccs.d" "fonts/fontfixed6x8.d" "pet_doggy/dead.d" "pet_doggy/dizzy1.d" "pet_doggy/dizzy2.d" "pet_doggy/eat1.d" "pet_doggy/eat2.d" "pet_doggy/eat3.d" "pet_doggy/happy1.d" "pet_doggy/happy2.d" "pet_doggy/happy3.d" "pet_doggy/normal1.d" "pet_doggy/normal2.d" "pet_doggy/normal3.d" "pet_doggy/play1.d" "pet_doggy/play2.d" "pet_doggy/play3.d" "pet_doggy/poop1.d" "pet_doggy/poop2.d" "pet_doggy/sleep1.d" "pet_doggy/sleep2.d" "pet_doggy/sleep3.d" "pet_doggy/unhappy1.d" "pet_doggy/unhappy2.d" "pet_doggy/unhappy3.d" "pet_doggy/walk1.d" "pet_doggy/walk2.d" "pet_doggy/walk3.d" "pet_mametchi/pet1_dead.d" "pet_mametchi/pet1_dizzy1.d" "pet_mametchi/pet1_dizzy2.d" "pet_mametchi/pet1_eat1.d" "pet_mametchi/pet1_eat2.d" "pet_mametchi/pet1_eat3.d" "pet_mametchi/pet1_happy1.d" "pet_mametchi/pet1_happy2.d" "pet_mametchi/pet1_happy3.d" 
+	-$(RM) "pet_mametchi/pet1_normal1.d" "pet_mametchi/pet1_normal2.d" "pet_mametchi/pet1_normal3.d" "pet_mametchi/pet1_play1.d" "pet_mametchi/pet1_play2.d" "pet_mametchi/pet1_play3.d" "pet_mametchi/pet1_poop1.d" "pet_mametchi/pet1_poop2.d" "pet_mametchi/pet1_sleep1.d" "pet_mametchi/pet1_sleep2.d" "pet_mametchi/pet1_sleep3.d" "pet_mametchi/pet1_unhappy1.d" "pet_mametchi/pet1_unhappy2.d" "pet_mametchi/pet1_unhappy3.d" "pet_mametchi/pet1_walk1.d" "pet_mametchi/pet1_walk2.d" "pet_mametchi/pet1_walk3.d" 
+	-$(RM) "color.asm" "color2.asm" "main.asm" "system_msp432p401r.asm" "LcdDriver/Crystalfontz128x128_ST7735.asm" "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.asm" "ccs/startup_msp432p401r_ccs.asm" "fonts/fontfixed6x8.asm" "pet_doggy/dead.asm" "pet_doggy/dizzy1.asm" "pet_doggy/dizzy2.asm" "pet_doggy/eat1.asm" "pet_doggy/eat2.asm" "pet_doggy/eat3.asm" "pet_doggy/happy1.asm" "pet_doggy/happy2.asm" "pet_doggy/happy3.asm" "pet_doggy/normal1.asm" "pet_doggy/normal2.asm" "pet_doggy/normal3.asm" "pet_doggy/play1.asm" "pet_doggy/play2.asm" "pet_doggy/play3.asm" "pet_doggy/poop1.asm" "pet_doggy/poop2.asm" "pet_doggy/sleep1.asm" "pet_doggy/sleep2.asm" "pet_doggy/sleep3.asm" "pet_doggy/unhappy1.asm" "pet_doggy/unhappy2.asm" "pet_doggy/unhappy3.asm" "pet_doggy/walk1.asm" "pet_doggy/walk2.asm" "pet_doggy/walk3.asm" "pet_mametchi/pet1_dead.asm" "pet_mametchi/pet1_dizzy1.asm" "pet_mametchi/pet1_dizzy2.asm" "pet_mametchi/pet1_eat1.asm" "pet_mametchi/pet1_eat2.asm" "pet_mametchi/pet1_eat3.asm" "pet_mametchi/pet1_happy1.asm" 
+	-$(RM) "pet_mametchi/pet1_happy2.asm" "pet_mametchi/pet1_happy3.asm" "pet_mametchi/pet1_normal1.asm" "pet_mametchi/pet1_normal2.asm" "pet_mametchi/pet1_normal3.asm" "pet_mametchi/pet1_play1.asm" "pet_mametchi/pet1_play2.asm" "pet_mametchi/pet1_play3.asm" "pet_mametchi/pet1_poop1.asm" "pet_mametchi/pet1_poop2.asm" "pet_mametchi/pet1_sleep1.asm" "pet_mametchi/pet1_sleep2.asm" "pet_mametchi/pet1_sleep3.asm" "pet_mametchi/pet1_unhappy1.asm" "pet_mametchi/pet1_unhappy2.asm" "pet_mametchi/pet1_unhappy3.asm" "pet_mametchi/pet1_walk1.asm" "pet_mametchi/pet1_walk2.asm" "pet_mametchi/pet1_walk3.asm" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
